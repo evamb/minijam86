@@ -3,7 +3,8 @@ extends Node
 
 signal beat_hit
 signal beat
-
+signal target_selected
+signal bar_selected
 
 export (Resource) var song
 
@@ -17,6 +18,8 @@ func _ready() -> void:
 	time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
 	song.connect("beat", self, "_on_beat")
 	song.connect("beat_hit", self, "_on_beat_hit")
+	song.connect("target_selected", self, "_on_target_selected")
+	song.connect("bar_selected", self, "_on_bar_selected")
 
 
 func _process(delta: float) -> void:
@@ -28,8 +31,16 @@ func _process(delta: float) -> void:
 
 
 func _on_beat() -> void:
-	print("beat")
+	emit_signal("beat")
 
 
 func _on_beat_hit(input_delay: float) -> void:
-	print("beat hit %s" % input_delay)
+	emit_signal("beat_hit", input_delay)
+
+
+func _on_target_selected(time_remaining: float) -> void:
+	emit_signal("target_selected", time_remaining)
+
+
+func _on_bar_selected(bar: PoolRealArray, beat: float) -> void:
+	emit_signal("bar_selected", bar, beat)
