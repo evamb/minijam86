@@ -9,7 +9,9 @@ export(float) var _indicator_screen_percentage = 0.5
 
 onready var _tween = $Tween
 onready var _indicator = $BeatIndicator
-onready var _screen_size = get_viewport().size
+onready var _screen_size = Vector2(
+	ProjectSettings.get_setting("display/window/size/width"),
+	ProjectSettings.get_setting("display/window/size/height"))
 onready var _notes = $SongManager.song.get_notes()
 onready var _bar_duration = 4.0 / ($SongManager.song.beats_per_minute / 60.0)
 onready var HitIndicator = preload("res://beat_manager/hit_indicator/HitIndicator.tscn")

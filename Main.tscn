@@ -46,5 +46,5 @@ position = Vector2( 960, 690 )
 position = Vector2( 960, 540 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 5 )
-frame = 1
+frame = 3
 playing = true
