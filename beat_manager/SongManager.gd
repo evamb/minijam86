@@ -61,9 +61,9 @@ func _on_bar_selected(bar: PoolRealArray, bar_duration: float, first_note_offset
 
 func _on_song_completed() -> void:
 	emit_signal("song_completed")
-	set_process(false)
-	yield(get_tree(), "idle_frame")
+#	set_process(false)
+#	yield(get_tree(), "idle_frame")
 	song.reset()
 	_time_begin = OS.get_ticks_usec()
 	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
-	set_process(true)
+#	set_process(true)

@@ -44,10 +44,16 @@ func get_notes() -> PoolRealArray:
 
 
 func _next_target() -> float:
+	
+	var cur_bar
+	if _cur_bar_index >= song.size():
+		cur_bar = PoolRealArray([0.0])
+		_end_with_next_beat = true
+	else:
+		cur_bar = bars[song[_cur_bar_index]]
 	if _cur_note_index == 0:
 		var first_note_offset = 0.125 if _cur_bar_index == 0 else 0
-		emit_signal("bar_selected", bars[song[_cur_bar_index]], _bar_duration, first_note_offset)
-	var cur_bar: PoolRealArray = bars[song[_cur_bar_index]]
+		emit_signal("bar_selected", cur_bar, _bar_duration, first_note_offset)
 	var next_bar_index = _cur_bar_index
 	var next_note_index = _cur_note_index + 1
 	if next_note_index >= cur_bar.size():
@@ -57,11 +63,12 @@ func _next_target() -> float:
 	var cur_note = _cur_bar_index * _bar_duration + cur_bar[_cur_note_index] * _bar_duration
 	_cur_target_time = cur_note
 	
+	var next_note
 	if next_bar_index >= song.size():
-		_end_with_next_beat = true
-		return 0.0
-	var next_bar: PoolRealArray = bars[song[next_bar_index]]
-	var next_note = next_bar_index * _bar_duration + next_bar[next_note_index] * _bar_duration
+		next_note = next_bar_index * _bar_duration
+	else:
+		var next_bar = bars[song[next_bar_index]]
+		next_note = next_bar_index * _bar_duration + next_bar[next_note_index] * _bar_duration
 	_next_split_time = cur_note + (next_note - cur_note) / 2.0
 	_cur_bar_index = next_bar_index
 	_cur_note_index = next_note_index
@@ -79,7 +86,7 @@ func update_time(time: float) -> void:
 		if _end_with_next_beat:
 			emit_signal("song_completed")
 			return
-		emit_signal("beat", audio_streams[song[_cur_bar_index]])
+		emit_signal("beat", audio_streams[song[_cur_bar_index % song.size()]])
 
 	_prev_deviation = deviation
 	# leave one bar for intro
