@@ -3,5 +3,6 @@
 [ext_resource path="res://icon.png" type="Texture" id=1]
 
 [node name="HitIndicator" type="Sprite"]
+light_mask = 2
 scale = Vector2( 0.25, 10 )
 texture = ExtResource( 1 )

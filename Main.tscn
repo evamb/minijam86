@@ -15,4 +15,4 @@ texture = ExtResource( 2 )
 position = Vector2( 960, 688 )
 
 [node name="BeatManager" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 490 )
+position = Vector2( 960, 780 )
