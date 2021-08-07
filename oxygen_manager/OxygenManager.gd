@@ -15,6 +15,12 @@ onready var _limb_locations = {
 	"leg_left": $LegLeft,
 	"leg_right": $LegRight,
 }
+onready var _limb_labels = {
+	"arm_left": $ArmLeftLabel,
+	"arm_right": $ArmRightLabel,
+	"leg_left": $LegLeftLabel,
+	"leg_right": $LegRightLabel,
+}
 onready var _tween = $Tween
 onready var Oxygen = preload("res://oxygen_manager/Oxygen.tscn")
 
@@ -38,7 +44,10 @@ func _spawn_oxygen(action) -> void:
 	var oxygen = Oxygen.instance()
 	add_child(oxygen)
 	_tween.interpolate_property(oxygen, "position", Vector2.ZERO, _limb_locations[action].position, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	_tween.interpolate_property(oxygen, "modulate", Color.white, Color.transparent, 0.5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	_tween.start()
-	yield(_tween, "tween_completed")
+	yield(get_tree().create_timer(0.5), "timeout")
+	oxygen.queue_free()
 	_limb_oxygen_count[action] += 1
+	_limb_labels[action].text = str(_limb_oxygen_count[action])
 	emit_signal("oxygen_updated", _limb_oxygen_count)
