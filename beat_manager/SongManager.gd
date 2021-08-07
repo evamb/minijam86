@@ -39,8 +39,8 @@ func _on_beat_hit(input_delay: float) -> void:
 	emit_signal("beat_hit", input_delay)
 
 
-func _on_target_selected(time_remaining: float) -> void:
-	emit_signal("target_selected", time_remaining)
+func _on_target_selected(time_remaining: float, cur_target_time: float, next_target_time: float) -> void:
+	emit_signal("target_selected", time_remaining, cur_target_time, next_target_time)
 
 
 func _on_bar_selected(bar: PoolRealArray, bar_duration: float, first_note_offset: float) -> void:
