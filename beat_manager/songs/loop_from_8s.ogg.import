@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/loop_from_8s.ogg-312c6c1ac63054cf3f99619714e16590.oggstr"
+
+[deps]
+
+source_file="res://beat_manager/songs/loop_from_8s.ogg"
+dest_files=[ "res://.import/loop_from_8s.ogg-312c6c1ac63054cf3f99619714e16590.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=8.0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://beat_manager/BeatManager.gd" type="Script" id=1]
 [ext_resource path="res://beat_manager/hit_indicator/GradientMask.tres" type="Texture" id=2]
 [ext_resource path="res://beat_manager/songs/SimpleSong.tres" type="Resource" id=3]
 [ext_resource path="res://beat_manager/SongManager.gd" type="Script" id=4]
 [ext_resource path="res://beat_manager/BeatIndicator.gd" type="Script" id=5]
+[ext_resource path="res://beat_manager/songs/loop_from_8s.ogg" type="AudioStream" id=6]
 
 [node name="BeatManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -25,6 +26,7 @@ script = ExtResource( 4 )
 song = ExtResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SongManager"]
+stream = ExtResource( 6 )
 
 [node name="Tween" type="Tween" parent="."]
 

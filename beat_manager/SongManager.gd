@@ -19,6 +19,9 @@ onready var _audio_player = $AudioStreamPlayer
 
 
 func _ready() -> void:
+	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
+	_time_begin = OS.get_ticks_usec()
+	_audio_player.play()
 	set_process(false)
 	yield(self, "started")
 	song.reset();
@@ -29,13 +32,16 @@ func _ready() -> void:
 	song.connect("song_completed", self, "_on_song_completed")
 	song.connect("offset_updated", self, "_on_offset_updated")
 	_time_begin = OS.get_ticks_usec()
-	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
 	set_process(true)
 
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("beat_input"):
+	var time = (OS.get_ticks_usec() - _time_begin) / 1_000_000.0
+	time -= _time_delay
+	time = max(0, time)
+	if time >= 8.0:
 		emit_signal("started")
+		set_physics_process(false)
 
 
 func _process(delta: float) -> void:
@@ -48,9 +54,9 @@ func _process(delta: float) -> void:
 
 func _on_beat(audio_stream: AudioStream) -> void:
 	emit_signal("beat")
-	if _play_on_next_beat:
-		_audio_player.stream = audio_stream
-		_audio_player.play()
+#	if _play_on_next_beat:
+#		_audio_player.stream = audio_stream
+#		_audio_player.play()
 	_play_on_next_beat = false
 
 

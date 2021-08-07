@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="dance_dude_music" version="1" revision="0" sampleRate="44100" sampleFormat="5" tempo="60" timesigNumerator="4" timesigDenominator="4">
+<project name="dance_dude_music" version="1" revision="0" sampleRate="44100" sampleFormat="5" tempo="240" timesigNumerator="4" timesigDenominator="4">
     <pool>
-        <audioSources/>
+        <audioSources>
+            <audioSource fileName="loop_from_8s_210807-225332_0.wav"/>
+        </audioSources>
         <trackNameExtensions>
             <trackNameExtension trackType="0" value="0"/>
             <trackNameExtension trackType="1" value="0"/>
@@ -13,10 +15,10 @@
             <blockNameExtension trackType="0" value="0"/>
             <blockNameExtension trackType="1" value="0"/>
             <blockNameExtension trackType="2" value="0"/>
-            <blockNameExtension trackType="3" value="0"/>
-            <blockNameExtension trackType="4" value="5"/>
+            <blockNameExtension trackType="3" value="16"/>
+            <blockNameExtension trackType="4" value="7"/>
         </blockNameExtensions>
-        <blockSourceNameExtension value="0"/>
+        <blockSourceNameExtension value="1"/>
         <nextTakeGroupId value="0"/>
     </pool>
     <masterTrack name="Master" type="0" armed="0" monitored="0" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
@@ -40,7 +42,7 @@
             <data key="TrackColor" value="#91ffab"/>
         </metaData>
         <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
-        <track name="MIDI 0" type="4" armed="1" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
+        <track name="Hard" type="4" armed="0" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
             <state>AAAAAD9TMzM.UzMzPwAAAA==</state>
             <audioUnits/>
             <automationContainer>
@@ -64,30 +66,64 @@
                 <state></state>
             </sendsAutomationContainer>
             <metaData>
-                <data key="TrackAutoArmed" value="true"/>
                 <data key="TrackColor" value="#ab91ff"/>
             </metaData>
             <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
             <blocks>
-                <block name="MIDI 0" position="253575" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                <block name="MIDI 6" position="176400" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
                     <metaData>
                         <data key="BlockColor" value="#ab91ff"/>
                     </metaData>
-                    <blockData>AAAAEAAAAAAAAAAAAAArESRkAAAAAAABAAArEQAAKxEnZAAAAAAAAgAAViIAACsRJGQAAAAAAAMAAIEzAAArESdkAAAAAAAEAACsRAAAKxEkZAAAAAAABQAA11UAACsRJ2QAAAAAAAYAAQJmAAArESRkAAAAAAAHAAEtdwAAKxEnZAAA</blockData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAMAAGurAAAViSxkAAAAAAAEAACWvAAAFYgsZAAAAAAABQAA11UAABWJLGQAAAAAAAYAAS13AAAViSxkAAA=</blockData>
                     <automationBlocks/>
                 </block>
-                <block name="MIDI 4" position="88200" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                <block name="MIDI 6" position="264600" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
                     <metaData>
                         <data key="BlockColor" value="#ab91ff"/>
                     </metaData>
-                    <blockData>AAAAEAAAAAAAAAAAAAArEShkAAAAAAABAAArEQAAFYkoZAAAAAAABgAAQJoAABWJKGQAAAAAAAcAAFYiAAArEShkAAAAAAAIAACBMwAAKxEoZAAAAAAAAwAA11UAACsRKGQAAAAAAAQAAQJmAAArEShkAAA=</blockData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAAViQAAFYksZAAAAAAABQAAKxEAABWJLGQAAAAAAAIAAFYiAAAViSxkAAAAAAADAACWvAAAFYgsZAAAAAAABAABAmYAABWJLGQAAAAAAAYAAS13AAAViSxkAAA=</blockData>
                     <automationBlocks/>
                 </block>
-                <block name="MIDI 1" position="529200" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                <block name="MIDI 6" position="352800" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
                     <metaData>
                         <data key="BlockColor" value="#ab91ff"/>
                     </metaData>
-                    <blockData>AAAAEAAAAAAAAAAAAAArEShkAAAAAAABAABWIgAAKxEoZAAAAAAAAgAAgTMAACsRKGQAAAAAAAMAAKxEAAArEShkAAAAAAAEAAECZgAAKxEoZAAA</blockData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAABWIgAAFYksZAAAAAAAAgAAa6sAABWJLGQAAAAAAAMAAJa8AAAViCxkAAAAAAAFAADXVQAAFYgsZAAAAAAABAABAmYAABWJLGQAAAAAAAYAAS13AAAViSxkAAA=</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="441000" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAUAAGurAAAViSxkAAAAAAADAACWvAAAFYgsZAAAAAAABAABAmYAABWJLGQAAA==</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="529200" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAMAAGurAAAViSxkAAAAAAAEAACWvAAAFYgsZAAAAAAABgAA11UAABWILGQAAAAAAAUAAQJmAAAViSxkAAAAAAAHAAEtdwAAFYksZAAA</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="617400" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAMAAGurAAAViSxkAAAAAAAEAACWvAAAFYgsZAAAAAAABQAA11UAABWILGQAAAAAAAYAAQJmAAAViSxkAAAAAAAIAAEX7wAAFYksZAAAAAAABwABLXcAABWJLGQAAA==</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="705600" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAMAAGurAAAViSxkAAAAAAAEAACWvAAAFYgsZAAAAAAACQAAwc0AABWILGQAAAAAAAUAANdVAAAViCxkAAAAAAAGAAECZgAAFYksZAAAAAAABwABF+8AABWJLGQAAAAAAAgAAS13AAAViSxkAAA=</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="793800" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAMAAGurAAAViSxkAAAAAAAEAACWvAAAFYgsZAAAAAAABQAAwc0AABWILGQAAAAAAAYAANdVAAAViCxkAAAAAAAHAAECZgAAFYksZAAAAAAACAABF+8AABWJLGQAAAAAAAkAAS13AAAViSxkAAA=</blockData>
                     <automationBlocks/>
                 </block>
             </blocks>
@@ -108,7 +144,7 @@
             <midiInput externalDeviceIndex="0" channelIndex="-1"/>
             <midiOutput externalDeviceIndex="-1" channelIndex="-1"/>
         </track>
-        <track name="MIDI 1" type="4" armed="0" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
+        <track name="Easy" type="4" armed="1" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
             <state>PwAAAD9TMzM.UzMzPwAAAA==</state>
             <audioUnits/>
             <automationContainer>
@@ -132,28 +168,71 @@
                 <state></state>
             </sendsAutomationContainer>
             <metaData>
-                <data key="TrackColor" value="#91ff9a"/>
+                <data key="TrackAutoArmed" value="true"/>
+                <data key="TrackColor" value="#ab91ff"/>
             </metaData>
             <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
             <blocks>
-                <block name="MIDI 2" position="374850" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                <block name="MIDI 6" position="176400" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
                     <metaData>
-                        <data key="BlockColor" value="#91ff9a"/>
+                        <data key="BlockColor" value="#ab91ff"/>
                     </metaData>
-                    <blockData>AAAAEAAAAAAAAAAAAAArEUFkAAAAAAABAABWIgAAKxFBZAAA</blockData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAACAABWIgAAFYksZAAAAAAABAAArEQAABWILGQAAAAAAAYAAQJmAAAViSxkAAA=</blockData>
                     <automationBlocks/>
                 </block>
-                <block name="MIDI 2" position="237038" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                <block name="MIDI 6" position="264600" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
                     <metaData>
-                        <data key="BlockColor" value="#91ff9a"/>
+                        <data key="BlockColor" value="#ab91ff"/>
                     </metaData>
-                    <blockData>AAAAEAAAAAAAAAAAAAArEUxkAAAAAAABAAAAAAAAKxFUZAAAAAAAAgAAKxEAACsRTWQAAAAAAAMAAFYiAAArEU9kAAAAAAAEAABWIgAAKxFTZAAAAAAABQAAgTMAACsRTGQAAAAAAAYAAKxEAAArEVFkAAAAAAAHAAECZgAAKxFPZAAA</blockData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAAEAAArEQAAFYksZAAAAAAAAQAAViIAABWJLGQAAAAAAAIAAKxEAAAViCxkAAAAAAADAAECZgAAFYksZAAA</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="352800" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAACAABWIgAAFYksZAAAAAAABQAAa6sAABWJLGQAAAAAAAMAAJa8AAAViCxkAAAAAAAEAAECZgAAFYksZAAA</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="441000" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAMAAKxEAAAViCxkAAAAAAAEAAECZgAAFYksZAAA</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="529200" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAMAAKxEAAAViCxkAAAAAAAEAAECZgAAFYksZAAA</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="617400" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAAArEQAAFYksZAAAAAAAAgAAViIAABWJLGQAAAAAAAMAAKxEAAAViCxkAAAAAAAEAAECZgAAFYksZAAAAAAABQABLXcAABWJLGQAAA==</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="705600" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAACAABWIgAAFYksZAAAAAAAAwAArEQAABWILGQAAAAAAAYAANdVAAAViCxkAAAAAAAEAAECZgAAFYksZAAAAAAABQABLXcAABWJLGQAAA==</blockData>
+                    <automationBlocks/>
+                </block>
+                <block name="MIDI 6" position="793800" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ab91ff"/>
+                    </metaData>
+                    <blockData>AAAAEAAAAAAAAAAAAAAViSxkAAAAAAABAABWIgAAFYksZAAAAAAAAgAArEQAABWILGQAAAAAAAMAANdVAAAViCxkAAAAAAAEAAECZgAAFYksZAAAAAAABgABF+8AABWJLGQAAAAAAAUAAS13AAAViSxkAAA=</blockData>
                     <automationBlocks/>
                 </block>
             </blocks>
             <midiUnits/>
-            <midiInstrument uid="AAAAAFNWMlRzeW5qAAAAAA==" vendor="Ymck" name="Magical8bitPlug2" sideChainBufferType="1">
-                <state>Q2NuSxQAAAAAAAAAAAAAAAAAAABDY25LAAAAAEZCQ2gAAAABAAAAAAABAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT6VkMyIfEEAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI.PiA8cm9vdD48UGFyYW1zPjxQQVJBTSBpZD0iYXJwZWdnaW9EaXJlY3Rpb24iIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9ImFycGVnZ2lvVGltZSIgdmFsdWU9IjAuMDI5OTk5OTk5MzI5NDQ3NzUiLz48UEFSQU0gaWQ9ImF0dGFjayIgdmFsdWU9IjAuMDIzMDAwMDAxOTA3MzQ4NjMiLz48UEFSQU0gaWQ9ImJlbmRSYW5nZSIgdmFsdWU9IjIuMCIvPjxQQVJBTSBpZD0iY29sb3JTY2hlbWUiIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9ImRlY2F5IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJkdXR5IiB2YWx1ZT0iMi4wIi8+PFBBUkFNIGlkPSJnYWluIiB2YWx1ZT0iMC4xMDk5OTk5OTk0MDM5NTM2Ii8+PFBBUkFNIGlkPSJpc0FkdmFuY2VkUGFuZWxPcGVuX3JhdyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iaXNBcnBlZ2dpb0VuYWJsZWRfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJpc0R1dHlTZXF1ZW5jZUVuYWJsZWRfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJpc1BpdGNoU2VxdWVuY2VFbmFibGVkX3JhdyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iaXNWb2x1bWVTZXF1ZW5jZUVuYWJsZWRfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJtYXhQb2x5IiB2YWx1ZT0iOC4wIi8+PFBBUkFNIGlkPSJub2lzZUFsZ29yaXRobV9yYXciIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9Im9zYyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0icGl0Y2hTZXF1ZW5jZU1vZGVfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJyZWxlYXNlIiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJyZXN0cmljdHNUb05FU0ZyZXF1ZW5jeV9yYXciIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9InN1c2xldmVsIiB2YWx1ZT0iMS4wIi8+PFBBUkFNIGlkPSJzd2VlcEluaXRpYWxQaXRjaCIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0ic3dlZXBUaW1lIiB2YWx1ZT0iMC4xMDAwMDAwMDE0OTAxMTYxIi8+PFBBUkFNIGlkPSJ2aWJyYXRvRGVsYXkiIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9InZpYnJhdG9EZXB0aCIgdmFsdWU9IjAuMzg5OTk5OTg1Njk0ODg1MyIvPjxQQVJBTSBpZD0idmlicmF0b0lnbm9yZXNXaGVlbF9yYXciIHZhbHVlPSIxLjAiLz48UEFSQU0gaWQ9InZpYnJhdG9SYXRlIiB2YWx1ZT0iMC4xMDgwMDAwMDI4MDE0MTgzIi8+PC9QYXJhbXM+PHZvbHVtZUVudj48L3ZvbHVtZUVudj48cGl0Y2hFbnY+PC9waXRjaEVudj48ZHV0eUVudj48L2R1dHlFbnY+PC9yb290PgA=</state>
+            <midiInstrument uid="AAAAAFNWMlRTZkxiAAAAAA==" vendor="Spitfire Audio" name="LABS (64 Bit)" sideChainBufferType="1">
+                <state>Q2NuSxQAAAAAAAAAAAAAAAAAAABDY25LAAAAAEZCQ2gAAAABAAAAAAABAwsAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABlJVkMyIUAZAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI.PiA8TGFicz48TUVUQSBmYW1pbHk9IkRydW1zIiBuYW1lPSJEcnVtcyIgcHJvZHVjdE1vZGU9IjAiIHZlcnNpb249IjEuMC4zIiB0YWdzPSIxMDEwMDAwOkRydW1zIiBtb2RpZmllZD0iMCIvPjxVSSB1aXNpemU9IjEuMCIgdWljb2xsYXBzZWQ9IjEiLz48QVJUSUNTPjxTRVRUSU5HIGlkPSJwX3N5bmNUb1RlbXBvIiB2YWx1ZT0iMSIvPjxTRVRUSU5HIGlkPSJwX2R5bmFtaWNzVmVsb2NpdHlNb2RlIiB2YWx1ZT0iQ09NUFJFU1NFRCBWRUxPQ0lUWSBISUdIIi8+PFNFVFRJTkcgaWQ9InBfc2hvcnRSVE1vZGUiIHZhbHVlPSItMi4wIi8+PFNFVFRJTkcgaWQ9InBfdmVsb2NpdHlDdXJ2ZSIgdmFsdWU9IkxJTkVBUiBWRUxPQ0lUWSIvPjxTRVRUSU5HIGlkPSJwX3F1YW50aXNlTW9kZSIgdmFsdWU9IiIvPjxTRVRUSU5HIGlkPSJwX21peGVyQWR2YW5jZWQiIHZhbHVlPSIxIi8+PFNFVFRJTkcgaWQ9InBfbWl4ZXJHbG9iYWwiIHZhbHVlPSIxIi8+PFNFVFRJTkcgaWQ9InBfbWl4ZXJMb2NrIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJwX21peGVyUGFnZSIgdmFsdWU9IiIvPjxTRVRUSU5HIGlkPSJwX2FydGljTG9jayIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0icF9hcnRpY1BhZ2UiIHZhbHVlPSIiLz48U0VUVElORyBpZD0icF9sYXN0U2VsZWN0ZWRQcmltYXJ5QXJ0aWMiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InBfbWlkaUNoYW5uZWwiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InBfc2VsZWN0ZWRUYWdzIiB2YWx1ZT0iRHJ1bXMiLz48U0VUVElORyBpZD0icF9maWx0ZXJQb3MiIHZhbHVlPSJbXSIvPjxTRVRUSU5HIGlkPSJwX3ByZXNldFBvcyIgdmFsdWU9IlswLCAwXSIvPjxTRVRUSU5HIGlkPSJwX2V2b0NvbnRhaW5lclBvcyIgdmFsdWU9IltdIi8+PFNFVFRJTkcgaWQ9InBfb2N0YXZlIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJwX29kZXN0SW5kaWNlcyIgdmFsdWU9IjAsMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDksNTAsNTEsNTIsNTMsNTQsNTUsNTYsNTcsNTgsNTksNjAsNjEsNjIsNjMsNjQsNjUsNjYsNjcsNjgsNjksNzAsNzEsNzIsNzMsNzQsNzUsNzYsNzcsNzgsNzksODAsODEsODIsODMsODQsODUsODYsODcsODgsODksOTAsOTEsOTIsOTMsOTQsOTUsOTYsOTcsOTgsOTksMTAwLDEwMSwxMDIsMTAzLDEwNCwxMDUsMTA2LDEwNywxMDgsMTA5LDExMCwxMTEsMTEyLDExMywxMTQsMTE1LDExNiwxMTcsMTE4LDExOSwxMjAsMTIxLDEyMiwxMjMsMTI0LDEyNSwxMjYsMTI3LDEyOCwxMjksMTMwLDEzMSwxMzIsMTMzLDEzNCwxMzUsMTM2LDEzNywxMzgsMTM5LDE0MCwxNDEsMTQyLDE0MywxNDQsMTQ1LDE0NiwxNDcsMTQ4LDE0OSwxNTAsMTUxLDE1MiwxNTMsMTU0LDE1NSwxNTYsMTU3LDE1OCwxNTksMTYwLDE2MSwxNjIsMTYzLDE2NCwxNjUsMTY2LDE2NywxNjgsMTY5LDE3MCwxNzEsMTcyLDE3MywxNzQsMTc1LDE3NiwxNzcsMTc4LDE3OSwxODAsMTgxLDE4MiwxODMsMTg0LDE4NSwxODYsMTg3LDE4OCwxODksMTkwLDE5MSwxOTIsMTkzLDE5NCwxOTUsMTk2LDE5NywxOTgsMTk5LDIwMCwyMDEsMjAyLDIwMywyMDQsMjA1LDIwNiwyMDcsMjA4LDIwOSwyMTAsMjExLDIxMiwyMTMsMjE0LDIxNSwyMTYsMjE3LDIxOCwyMTksMjIwLDIyMSwyMjIsMjIzLDIyNCwyMjUsMjI2LDIyNywyMjgsMjI5LDIzMCwyMzEsMjMyLDIzMywyMzQsMjM1LDIzNiwyMzcsMjM4LDIzOSwyNDAsMjQxLDI0MiwyNDMsMjQ0LDI0NSwyNDYsMjQ3LDI0OCwyNDksMjUwLDI1MSwyNTIsMjUzLDI1NCwyNTUsMjU2LDI1NywyNTgsMjU5LDI2MCwyNjEsMjYyLDI2MywyNjQiLz48U0VUVElORyBpZD0icF90aW1lU3RyZXRjaCIgdmFsdWU9IkRlZmF1bHQiLz48QVJUSUM+PFNFVFRJTkcgaWQ9ImFfbmFtZSIgdmFsdWU9IkxBQlNfRHJ1bXMiLz48U0VUVElORyBpZD0iYV92ZXJzaW9uIiB2YWx1ZT0iMTY3Nzc5ODQiLz48U0VUVElORyBpZD0iYV90ZW1wbGF0ZUlkeCIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0iYV9vZGVzdCIgdmFsdWU9IlJFVkVSQiIvPjxTRVRUSU5HIGlkPSJhX2FjdGl2ZSIgdmFsdWU9IjIiLz48U0VUVElORyBpZD0iYV9iYWNrQWN0aXZlIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJhX3R3b0hhbmRlZCIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0iYV9hdXRvTWFrZVVwIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJ0X3R5cGUiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InRfZW5hYmxlZCIgdmFsdWU9IjEiLz48U0VUVElORyBpZD0idF9sYXRjaCIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0idF9rZXlzd2l0Y2giIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InRfbWlkaUNoYW5uZWwiIHZhbHVlPSIxIi8+PFNFVFRJTkcgaWQ9InRfdmVsRnJvbSIgdmFsdWU9IjEiLz48U0VUVElORyBpZD0idF92ZWxUbyIgdmFsdWU9IjEyNyIvPjxTRVRUSU5HIGlkPSJ0X2NjIiB2YWx1ZT0iMzIiLz48U0VUVElORyBpZD0idF9jY1ZhbHVlRnJvbSIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0idF9jY1ZhbHVlVG8iIHZhbHVlPSIxMjciLz48U0VUVElORyBpZD0idF9zcGVlZEZyb20iIHZhbHVlPSIwLjAiLz48U0VUVElORyBpZD0idF9zcGVlZFRvIiB2YWx1ZT0iMC41Ii8+PFNFVFRJTkcgaWQ9InRfcHJvZ3JhbUNoYW5nZSIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0icnJfdGltZW91dCIgdmFsdWU9Ii0xLjAiLz48U0VUVElORyBpZD0icnJfbmVpZ2hib3VyTWluIiB2YWx1ZT0iMzYiLz48U0VUVElORyBpZD0icnJfbmVpZ2hib3VyTWF4IiB2YWx1ZT0iNjEiLz48U0VUVElORyBpZD0icnJfdXNlTmVpZ2hib3VyIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJycl9jb3VudCIgdmFsdWU9IjkiLz48U0VUVElORyBpZD0icnJfaW5jIiB2YWx1ZT0iMSIvPjxTRVRUSU5HIGlkPSJycl9sYXllcnMiIHZhbHVlPSIxIi8+PFNFVFRJTkcgaWQ9InJyX2dhaW4iIHZhbHVlPSIxLjAiLz48U0VUVElORyBpZD0icnJfc3RhcnQiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InJyX3N5bmMiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InJyX3BsYXkiIHZhbHVlPSIxIi8+PFNFVFRJTkcgaWQ9InJyX2tleXN3aXRjaEZyb20iIHZhbHVlPSItMSIvPjxTRVRUSU5HIGlkPSJycl9rZXlzd2l0Y2hUbyIgdmFsdWU9Ii0xIi8+PFNFVFRJTkcgaWQ9InJyX2tleXN3aXRjaFRvIiB2YWx1ZT0iLTEiLz48U0VUVElORyBpZD0icnJfbW9kZSIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0icl9taWRpQ2hhbm5lbCIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0icl90cmFuc3Bvc2UiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InJfbGF5ZXJUcmFuc3Bvc2UiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9ImlfZXhwcmVzc2lvbiIgdmFsdWU9IjEuMCIvPjxTRVRUSU5HIGlkPSJpX2R5bmFtaWNzIiB2YWx1ZT0iMC4wIi8+PFNFVFRJTkcgaWQ9ImlfcmV2ZXJiIiB2YWx1ZT0iMC4wIi8+PFNFVFRJTkcgaWQ9ImlfcmVsZWFzZSIgdmFsdWU9IjAuNSIvPjxTRVRUSU5HIGlkPSJpX3RpZ2h0IiB2YWx1ZT0iMC41Ii8+PFNFVFRJTkcgaWQ9ImlfdmlicmF0byIgdmFsdWU9IjEuMCIvPjxTRVRUSU5HIGlkPSJpX3ZhcmlhdGlvbiIgdmFsdWU9IjAuMCIvPjxTRVRUSU5HIGlkPSJzX3BhbiIgdmFsdWU9IjAuNSIvPjxTRVRUSU5HIGlkPSJzX3dpZHRoIiB2YWx1ZT0iMC41Ii8+PFNFVFRJTkcgaWQ9InNfZmxpcCIgdmFsdWU9IjAuMCIvPjxNSVg+PFNFVFRJTkcgaWQ9Im1fbWFpbiIgdmFsdWU9IjEuMCIgbWljSWQ9IjEiLz48U0VUVElORyBpZD0iZV9tYWluIiB2YWx1ZT0iMSIgbWljSWQ9IjEiLz48U0VUVElORyBpZD0iYl9tYWluIiB2YWx1ZT0iMCIgbWljSWQ9IjEiLz48U0VUVElORyBpZD0ibV9hbHQxIiB2YWx1ZT0iMC4wIiBtaWNJZD0iMiIvPjxTRVRUSU5HIGlkPSJlX2FsdDEiIHZhbHVlPSIwIiBtaWNJZD0iMiIvPjxTRVRUSU5HIGlkPSJiX2FsdDEiIHZhbHVlPSIwIiBtaWNJZD0iMiIvPjxTRVRUSU5HIGlkPSJtX2FsdDIiIHZhbHVlPSIwLjAiIG1pY0lkPSIzIi8+PFNFVFRJTkcgaWQ9ImVfYWx0MiIgdmFsdWU9IjAiIG1pY0lkPSIzIi8+PFNFVFRJTkcgaWQ9ImJfYWx0MiIgdmFsdWU9IjAiIG1pY0lkPSIzIi8+PFNFVFRJTkcgaWQ9Im1fYWx0MyIgdmFsdWU9IjAuMCIgbWljSWQ9IjQiLz48U0VUVElORyBpZD0iZV9hbHQzIiB2YWx1ZT0iMCIgbWljSWQ9IjQiLz48U0VUVElORyBpZD0iYl9hbHQzIiB2YWx1ZT0iMCIgbWljSWQ9IjQiLz48L01JWD48L0FSVElDPjwvQVJUSUNTPjxQQVJBTUVURVJTPjxQQVJBTSBpZD0iZ19nYWluIiB2YWx1ZT0iMS4wIiBjYz0iNyIvPjxQQVJBTSBpZD0iZ19wYW4iIHZhbHVlPSIwLjUiIGNjPSIxMCIvPjxQQVJBTSBpZD0iZ190dW5lIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfcmV2ZXJiIiB2YWx1ZT0iMC4wIiBjYz0iMTkiLz48UEFSQU0gaWQ9ImlfdGlnaHQiIHZhbHVlPSIwLjUiIGNjPSIxOCIvPjxQQVJBTSBpZD0iaV9zcGVlZCIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX3JlbGVhc2UiIHZhbHVlPSIwLjUiIGNjPSIxNyIvPjxQQVJBTSBpZD0iaV9leHByZXNzaW9uIiB2YWx1ZT0iMS4wIiBjYz0iMTEiLz48UEFSQU0gaWQ9ImlfZHluYW1pY3MiIHZhbHVlPSIwLjAiIGNjPSIxIi8+PFBBUkFNIGlkPSJpX3ZhcmlhdGlvbiIgdmFsdWU9IjAuMCIgY2M9IjIwIi8+PFBBUkFNIGlkPSJpX3ZpYnJhdG8iIHZhbHVlPSIxLjAiIGNjPSIyMSIvPjxQQVJBTSBpZD0iaV9lbnZhdHQiIHZhbHVlPSIwLjA5OTk5OTk4NjU4ODk1NDkzIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfZW52ZGVjIiB2YWx1ZT0iMC4wOTk5OTk5OTQwMzk1MzU1MiIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX2VudnN1cyIgdmFsdWU9IjEuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX2VudnJlbCIgdmFsdWU9IjIuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX21peHNpbXBsZSIgdmFsdWU9IjAuNSIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJzX2ZsaXAiIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0ic193aWR0aCIgdmFsdWU9IjAuNSIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJzX3BhbiIgdmFsdWU9IjAuNSIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX2RlbGF5IiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfYW1vdW50IiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfZGlzdG9ydCIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX2x1c2hWZXJiIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfcGVkdm9sIiB2YWx1ZT0iMC41IiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfcGVkRHluIiB2YWx1ZT0iMC41IiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbGVuZ3RoIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfdGltZU1hY2hpbmUiIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9zdHJldGNoIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9Imlfc29mdFBlZGFsIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfcmVzcG9uc2UiIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9tYWxsZXQiIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9zdG9wZU11dGUiIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9kaXJlY3Rpb24iIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9scEZpbHRlciIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX3BvcnRhbWVudG8iIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9tZXRhWzE4XSIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX21ldGFbMTldIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbWV0YVsyMF0iIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9tZXRhWzIxXSIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX21ldGFbMjJdIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbWV0YVsyM10iIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9tZXRhWzI0XSIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX21ldGFbMjVdIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbWV0YVsyNl0iIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0ibV9tYWluIiB2YWx1ZT0iMS4wIiBjYz0iMjIiLz48UEFSQU0gaWQ9Im1fYWx0MSIgdmFsdWU9IjAuMCIgY2M9IjIzIi8+PFBBUkFNIGlkPSJtX2FsdDIiIHZhbHVlPSIwLjAiIGNjPSIyNCIvPjxQQVJBTSBpZD0ibV9hbHQzIiB2YWx1ZT0iMC4wIiBjYz0iMjUiLz48L1BBUkFNRVRFUlM+PC9MYWJzPgA=</state>
                 <automationContainer>
                     <automationTracks/>
                 </automationContainer>
@@ -168,7 +247,174 @@
             <midiInput externalDeviceIndex="0" channelIndex="-1"/>
             <midiOutput externalDeviceIndex="-1" channelIndex="-1"/>
         </track>
-        <track name="MIDI 3" type="4" armed="0" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
+        <track name="loop_from_8s" type="3" armed="0" monitored="0" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0" channelCount="2" pitchTempoProcessorMode="1" timeStretchEnabled="1">
+            <state>AAAAAD76XjY.UzMzPwAAAA==</state>
+            <audioUnits/>
+            <automationContainer>
+                <automationTracks>
+                    <automationTrack parameterIndex="0" mode="3" enabled="1" defaultValue="0">
+                        <blocks/>
+                    </automationTrack>
+                    <automationTrack parameterIndex="1" mode="3" enabled="1" defaultValue="0.48900002">
+                        <blocks/>
+                    </automationTrack>
+                    <automationTrack parameterIndex="2" mode="3" enabled="1" defaultValue="0.82499999">
+                        <blocks/>
+                    </automationTrack>
+                    <automationTrack parameterIndex="3" mode="3" enabled="1" defaultValue="0.5">
+                        <blocks/>
+                    </automationTrack>
+                </automationTracks>
+            </automationContainer>
+            <sendsAutomationContainer>
+                <automationTracks/>
+                <state></state>
+            </sendsAutomationContainer>
+            <metaData>
+                <data key="SequencerTrackCollapsedState" value="2"/>
+                <data key="TrackColor" value="#ad91ff"/>
+            </metaData>
+            <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
+            <blocks>
+                <block name="Audio 0" position="0" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="0" positionEnd="176400" loopOffset="0" framesCount="176400" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0.00099773242630385494" fadeOut="0" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+                <block name="Audio 2" position="176400" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="176400" positionEnd="264600" loopOffset="0" framesCount="88200" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0" fadeOut="0" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+                <block name="Audio 4" position="264600" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="264600" positionEnd="352800" loopOffset="0" framesCount="88200" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0" fadeOut="0" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+                <block name="Audio 6" position="352800" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="352800" positionEnd="441000" loopOffset="0" framesCount="88200" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0" fadeOut="0" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+                <block name="Audio 8" position="441000" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="441000" positionEnd="529200" loopOffset="0" framesCount="88200" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0" fadeOut="0" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+                <block name="Audio 10" position="529200" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="529200" positionEnd="617400" loopOffset="0" framesCount="88200" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0" fadeOut="0" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+                <block name="Audio 12" position="617400" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="617400" positionEnd="705600" loopOffset="0" framesCount="88200" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0" fadeOut="0" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+                <block name="Audio 14" position="705600" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="705600" positionEnd="793800" loopOffset="0" framesCount="88200" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0" fadeOut="0" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+                <block name="Audio 15" position="793800" groupId="4294967295" muted="0">
+                    <metaData>
+                        <data key="BlockColor" value="#ad91ff"/>
+                    </metaData>
+                    <crossFadeIntervals/>
+                    <events>
+                        <event position="0" positionStart="793800" positionEnd="882044" loopOffset="0" framesCount="88244" loopEnabled="0" tempo="120" inverse="0" gain="0" fadeIn="0" fadeOut="0.0019944698789719413" fadeInCurve="0" fadeOutCurve="0" pitch="1" fileName="loop_from_8s_210807-225332_0.wav">
+                            <stretchMarks>
+                                <stretchMark initPosition="0" newPosition="0"/>
+                                <stretchMark initPosition="1764087" newPosition="882044"/>
+                            </stretchMarks>
+                            <automationBlocks/>
+                        </event>
+                    </events>
+                </block>
+            </blocks>
+            <audioInput externalDeviceIndex="-1" channelIndex="-1"/>
+        </track>
+        <track name="loop_from_8s*" type="3" armed="0" monitored="0" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0" channelCount="2" pitchTempoProcessorMode="1" timeStretchEnabled="1">
             <state>PwAAAD9TMzM.UzMzPwAAAA==</state>
             <audioUnits/>
             <automationContainer>
@@ -192,72 +438,11 @@
                 <state></state>
             </sendsAutomationContainer>
             <metaData>
-                <data key="TrackColor" value="#91ffed"/>
+                <data key="TrackColor" value="#ad91ff"/>
             </metaData>
             <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
             <blocks/>
-            <midiUnits/>
-            <midiInstrument uid="AAAAAFNWMlRTZkxiAAAAAA==" vendor="Spitfire Audio" name="LABS (64 Bit)" sideChainBufferType="1">
-                <state>Q2NuSxQAAAAAAAAAAAAAAAAAAABDY25LAAAAAEZCQ2gAAAABAAAAAAABAwsAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABlQVkMyIUcZAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI.PiA8TGFicz48TUVUQSBmYW1pbHk9IlNvZnQgUGlhbm8iIG5hbWU9IlNvZnQgUGlhbm8iIHByb2R1Y3RNb2RlPSIwIiB2ZXJzaW9uPSIxLjAuNSIgdGFncz0iNTAxMDAwOlBpYW5vIiBtb2RpZmllZD0iMCIvPjxVSSB1aXNpemU9IjEuMCIgdWljb2xsYXBzZWQ9IjEiLz48QVJUSUNTPjxTRVRUSU5HIGlkPSJwX3N5bmNUb1RlbXBvIiB2YWx1ZT0iMSIvPjxTRVRUSU5HIGlkPSJwX2R5bmFtaWNzVmVsb2NpdHlNb2RlIiB2YWx1ZT0iQ09NUFJFU1NFRCBWRUxPQ0lUWSBISUdIIi8+PFNFVFRJTkcgaWQ9InBfc2hvcnRSVE1vZGUiIHZhbHVlPSItMi4wIi8+PFNFVFRJTkcgaWQ9InBfdmVsb2NpdHlDdXJ2ZSIgdmFsdWU9IkxJTkVBUiBWRUxPQ0lUWSIvPjxTRVRUSU5HIGlkPSJwX3F1YW50aXNlTW9kZSIgdmFsdWU9IiIvPjxTRVRUSU5HIGlkPSJwX21peGVyQWR2YW5jZWQiIHZhbHVlPSIxIi8+PFNFVFRJTkcgaWQ9InBfbWl4ZXJHbG9iYWwiIHZhbHVlPSIxIi8+PFNFVFRJTkcgaWQ9InBfbWl4ZXJMb2NrIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJwX21peGVyUGFnZSIgdmFsdWU9IiIvPjxTRVRUSU5HIGlkPSJwX2FydGljTG9jayIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0icF9hcnRpY1BhZ2UiIHZhbHVlPSIiLz48U0VUVElORyBpZD0icF9sYXN0U2VsZWN0ZWRQcmltYXJ5QXJ0aWMiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InBfbWlkaUNoYW5uZWwiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InBfc2VsZWN0ZWRUYWdzIiB2YWx1ZT0iIi8+PFNFVFRJTkcgaWQ9InBfZmlsdGVyUG9zIiB2YWx1ZT0iW10iLz48U0VUVElORyBpZD0icF9wcmVzZXRQb3MiIHZhbHVlPSJbXSIvPjxTRVRUSU5HIGlkPSJwX2V2b0NvbnRhaW5lclBvcyIgdmFsdWU9IltdIi8+PFNFVFRJTkcgaWQ9InBfb2N0YXZlIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJwX29kZXN0SW5kaWNlcyIgdmFsdWU9IjAsMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDksNTAsNTEsNTIsNTMsNTQsNTUsNTYsNTcsNTgsNTksNjAsNjEsNjIsNjMsNjQsNjUsNjYsNjcsNjgsNjksNzAsNzEsNzIsNzMsNzQsNzUsNzYsNzcsNzgsNzksODAsODEsODIsODMsODQsODUsODYsODcsODgsODksOTAsOTEsOTIsOTMsOTQsOTUsOTYsOTcsOTgsOTksMTAwLDEwMSwxMDIsMTAzLDEwNCwxMDUsMTA2LDEwNywxMDgsMTA5LDExMCwxMTEsMTEyLDExMywxMTQsMTE1LDExNiwxMTcsMTE4LDExOSwxMjAsMTIxLDEyMiwxMjMsMTI0LDEyNSwxMjYsMTI3LDEyOCwxMjksMTMwLDEzMSwxMzIsMTMzLDEzNCwxMzUsMTM2LDEzNywxMzgsMTM5LDE0MCwxNDEsMTQyLDE0MywxNDQsMTQ1LDE0NiwxNDcsMTQ4LDE0OSwxNTAsMTUxLDE1MiwxNTMsMTU0LDE1NSwxNTYsMTU3LDE1OCwxNTksMTYwLDE2MSwxNjIsMTYzLDE2NCwxNjUsMTY2LDE2NywxNjgsMTY5LDE3MCwxNzEsMTcyLDE3MywxNzQsMTc1LDE3NiwxNzcsMTc4LDE3OSwxODAsMTgxLDE4MiwxODMsMTg0LDE4NSwxODYsMTg3LDE4OCwxODksMTkwLDE5MSwxOTIsMTkzLDE5NCwxOTUsMTk2LDE5NywxOTgsMTk5LDIwMCwyMDEsMjAyLDIwMywyMDQsMjA1LDIwNiwyMDcsMjA4LDIwOSwyMTAsMjExLDIxMiwyMTMsMjE0LDIxNSwyMTYsMjE3LDIxOCwyMTksMjIwLDIyMSwyMjIsMjIzLDIyNCwyMjUsMjI2LDIyNywyMjgsMjI5LDIzMCwyMzEsMjMyLDIzMywyMzQsMjM1LDIzNiwyMzcsMjM4LDIzOSwyNDAsMjQxLDI0MiwyNDMsMjQ0LDI0NSwyNDYsMjQ3LDI0OCwyNDksMjUwLDI1MSwyNTIsMjUzLDI1NCwyNTUsMjU2LDI1NywyNTgsMjU5LDI2MCwyNjEsMjYyLDI2MywyNjQiLz48U0VUVElORyBpZD0icF90aW1lU3RyZXRjaCIgdmFsdWU9IkRlZmF1bHQiLz48QVJUSUM+PFNFVFRJTkcgaWQ9ImFfbmFtZSIgdmFsdWU9IkxBQlNfU29mdF9QaWFubyIvPjxTRVRUSU5HIGlkPSJhX3ZlcnNpb24iIHZhbHVlPSIxNjc3ODQ5NiIvPjxTRVRUSU5HIGlkPSJhX3RlbXBsYXRlSWR4IiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJhX29kZXN0IiB2YWx1ZT0iUkVWRVJCIi8+PFNFVFRJTkcgaWQ9ImFfYWN0aXZlIiB2YWx1ZT0iMiIvPjxTRVRUSU5HIGlkPSJhX2JhY2tBY3RpdmUiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9ImFfdHdvSGFuZGVkIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJhX2F1dG9NYWtlVXAiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InRfdHlwZSIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0idF9lbmFibGVkIiB2YWx1ZT0iMSIvPjxTRVRUSU5HIGlkPSJ0X2xhdGNoIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJ0X2tleXN3aXRjaCIgdmFsdWU9IjAiLz48U0VUVElORyBpZD0idF9taWRpQ2hhbm5lbCIgdmFsdWU9IjEiLz48U0VUVElORyBpZD0idF92ZWxGcm9tIiB2YWx1ZT0iMSIvPjxTRVRUSU5HIGlkPSJ0X3ZlbFRvIiB2YWx1ZT0iMTI3Ii8+PFNFVFRJTkcgaWQ9InRfY2MiIHZhbHVlPSIzMiIvPjxTRVRUSU5HIGlkPSJ0X2NjVmFsdWVGcm9tIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJ0X2NjVmFsdWVUbyIgdmFsdWU9IjEyNyIvPjxTRVRUSU5HIGlkPSJ0X3NwZWVkRnJvbSIgdmFsdWU9IjAuMCIvPjxTRVRUSU5HIGlkPSJ0X3NwZWVkVG8iIHZhbHVlPSIwLjUiLz48U0VUVElORyBpZD0idF9wcm9ncmFtQ2hhbmdlIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJycl90aW1lb3V0IiB2YWx1ZT0iLTEuMCIvPjxTRVRUSU5HIGlkPSJycl9uZWlnaGJvdXJNaW4iIHZhbHVlPSIyMSIvPjxTRVRUSU5HIGlkPSJycl9uZWlnaGJvdXJNYXgiIHZhbHVlPSIxMDgiLz48U0VUVElORyBpZD0icnJfdXNlTmVpZ2hib3VyIiB2YWx1ZT0iMSIvPjxTRVRUSU5HIGlkPSJycl9jb3VudCIgdmFsdWU9Ii0zIi8+PFNFVFRJTkcgaWQ9InJyX2luYyIgdmFsdWU9IjEiLz48U0VUVElORyBpZD0icnJfbGF5ZXJzIiB2YWx1ZT0iMSIvPjxTRVRUSU5HIGlkPSJycl9nYWluIiB2YWx1ZT0iMS4wIi8+PFNFVFRJTkcgaWQ9InJyX3N0YXJ0IiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJycl9zeW5jIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJycl9wbGF5IiB2YWx1ZT0iMSIvPjxTRVRUSU5HIGlkPSJycl9rZXlzd2l0Y2hGcm9tIiB2YWx1ZT0iLTEiLz48U0VUVElORyBpZD0icnJfa2V5c3dpdGNoVG8iIHZhbHVlPSItMSIvPjxTRVRUSU5HIGlkPSJycl9rZXlzd2l0Y2hUbyIgdmFsdWU9Ii0xIi8+PFNFVFRJTkcgaWQ9InJyX21vZGUiIHZhbHVlPSIxIi8+PFNFVFRJTkcgaWQ9InJfbWlkaUNoYW5uZWwiIHZhbHVlPSIwIi8+PFNFVFRJTkcgaWQ9InJfdHJhbnNwb3NlIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJyX2xheWVyVHJhbnNwb3NlIiB2YWx1ZT0iMCIvPjxTRVRUSU5HIGlkPSJpX2V4cHJlc3Npb24iIHZhbHVlPSIxLjAiLz48U0VUVElORyBpZD0iaV9keW5hbWljcyIgdmFsdWU9IjAuMCIvPjxTRVRUSU5HIGlkPSJpX3JldmVyYiIgdmFsdWU9IjAuMCIvPjxTRVRUSU5HIGlkPSJpX3JlbGVhc2UiIHZhbHVlPSIwLjUiLz48U0VUVElORyBpZD0iaV90aWdodCIgdmFsdWU9IjAuNSIvPjxTRVRUSU5HIGlkPSJpX3ZpYnJhdG8iIHZhbHVlPSIxLjAiLz48U0VUVElORyBpZD0iaV92YXJpYXRpb24iIHZhbHVlPSIwLjAiLz48U0VUVElORyBpZD0ic19wYW4iIHZhbHVlPSIwLjUiLz48U0VUVElORyBpZD0ic193aWR0aCIgdmFsdWU9IjAuNSIvPjxTRVRUSU5HIGlkPSJzX2ZsaXAiIHZhbHVlPSIwLjAiLz48TUlYPjxTRVRUSU5HIGlkPSJtX21haW4iIHZhbHVlPSIxLjAiIG1pY0lkPSIxIi8+PFNFVFRJTkcgaWQ9ImVfbWFpbiIgdmFsdWU9IjEiIG1pY0lkPSIxIi8+PFNFVFRJTkcgaWQ9ImJfbWFpbiIgdmFsdWU9IjAiIG1pY0lkPSIxIi8+PFNFVFRJTkcgaWQ9Im1fYWx0MSIgdmFsdWU9IjAuMCIgbWljSWQ9IjIiLz48U0VUVElORyBpZD0iZV9hbHQxIiB2YWx1ZT0iMCIgbWljSWQ9IjIiLz48U0VUVElORyBpZD0iYl9hbHQxIiB2YWx1ZT0iMCIgbWljSWQ9IjIiLz48U0VUVElORyBpZD0ibV9hbHQyIiB2YWx1ZT0iMC4wIiBtaWNJZD0iMyIvPjxTRVRUSU5HIGlkPSJlX2FsdDIiIHZhbHVlPSIwIiBtaWNJZD0iMyIvPjxTRVRUSU5HIGlkPSJiX2FsdDIiIHZhbHVlPSIwIiBtaWNJZD0iMyIvPjxTRVRUSU5HIGlkPSJtX2FsdDMiIHZhbHVlPSIwLjAiIG1pY0lkPSI0Ii8+PFNFVFRJTkcgaWQ9ImVfYWx0MyIgdmFsdWU9IjAiIG1pY0lkPSI0Ii8+PFNFVFRJTkcgaWQ9ImJfYWx0MyIgdmFsdWU9IjAiIG1pY0lkPSI0Ii8+PC9NSVg+PC9BUlRJQz48L0FSVElDUz48UEFSQU1FVEVSUz48UEFSQU0gaWQ9ImdfZ2FpbiIgdmFsdWU9IjEuMCIgY2M9IjciLz48UEFSQU0gaWQ9ImdfcGFuIiB2YWx1ZT0iMC41IiBjYz0iMTAiLz48UEFSQU0gaWQ9ImdfdHVuZSIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX3JldmVyYiIgdmFsdWU9IjAuMCIgY2M9IjE5Ii8+PFBBUkFNIGlkPSJpX3RpZ2h0IiB2YWx1ZT0iMC41IiBjYz0iMTgiLz48UEFSQU0gaWQ9Imlfc3BlZWQiIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9yZWxlYXNlIiB2YWx1ZT0iMC41IiBjYz0iMTciLz48UEFSQU0gaWQ9ImlfZXhwcmVzc2lvbiIgdmFsdWU9IjEuMCIgY2M9IjExIi8+PFBBUkFNIGlkPSJpX2R5bmFtaWNzIiB2YWx1ZT0iMC4wIiBjYz0iMSIvPjxQQVJBTSBpZD0iaV92YXJpYXRpb24iIHZhbHVlPSIwLjAiIGNjPSIyMCIvPjxQQVJBTSBpZD0iaV92aWJyYXRvIiB2YWx1ZT0iMS4wIiBjYz0iMjEiLz48UEFSQU0gaWQ9ImlfZW52YXR0IiB2YWx1ZT0iMC4wOTk5OTk5ODY1ODg5NTQ5MyIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX2VudmRlYyIgdmFsdWU9IjAuMDk5OTk5OTk0MDM5NTM1NTIiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9lbnZzdXMiIHZhbHVlPSIxLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9lbnZyZWwiIHZhbHVlPSIyLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9taXhzaW1wbGUiIHZhbHVlPSIwLjUiIGNjPSItMSIvPjxQQVJBTSBpZD0ic19mbGlwIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9InNfd2lkdGgiIHZhbHVlPSIwLjUiIGNjPSItMSIvPjxQQVJBTSBpZD0ic19wYW4iIHZhbHVlPSIwLjUiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9kZWxheSIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX2Ftb3VudCIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX2Rpc3RvcnQiIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9sdXNoVmVyYiIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX3BlZHZvbCIgdmFsdWU9IjAuNSIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX3BlZER5biIgdmFsdWU9IjAuNSIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX2xlbmd0aCIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX3RpbWVNYWNoaW5lIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9Imlfc3RyZXRjaCIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX3NvZnRQZWRhbCIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX3Jlc3BvbnNlIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbWFsbGV0IiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9Imlfc3RvcGVNdXRlIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfZGlyZWN0aW9uIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbHBGaWx0ZXIiIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9wb3J0YW1lbnRvIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbWV0YVsxOF0iIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9tZXRhWzE5XSIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX21ldGFbMjBdIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbWV0YVsyMV0iIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9tZXRhWzIyXSIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX21ldGFbMjNdIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9ImlfbWV0YVsyNF0iIHZhbHVlPSIwLjAiIGNjPSItMSIvPjxQQVJBTSBpZD0iaV9tZXRhWzI1XSIgdmFsdWU9IjAuMCIgY2M9Ii0xIi8+PFBBUkFNIGlkPSJpX21ldGFbMjZdIiB2YWx1ZT0iMC4wIiBjYz0iLTEiLz48UEFSQU0gaWQ9Im1fbWFpbiIgdmFsdWU9IjEuMCIgY2M9IjIyIi8+PFBBUkFNIGlkPSJtX2FsdDEiIHZhbHVlPSIwLjAiIGNjPSIyMyIvPjxQQVJBTSBpZD0ibV9hbHQyIiB2YWx1ZT0iMC4wIiBjYz0iMjQiLz48UEFSQU0gaWQ9Im1fYWx0MyIgdmFsdWU9IjAuMCIgY2M9IjI1Ii8+PC9QQVJBTUVURVJTPjwvTGFicz4A</state>
-                <automationContainer>
-                    <automationTracks/>
-                </automationContainer>
-            </midiInstrument>
-            <midiInput externalDeviceIndex="0" channelIndex="-1"/>
-            <midiOutput externalDeviceIndex="-1" channelIndex="-1"/>
-        </track>
-        <track name="MIDI 2" type="4" armed="0" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
-            <state>PwAAAD9TMzM.UzMzPwAAAA==</state>
-            <audioUnits/>
-            <automationContainer>
-                <automationTracks>
-                    <automationTrack parameterIndex="0" mode="3" enabled="1" defaultValue="0.5">
-                        <blocks/>
-                    </automationTrack>
-                    <automationTrack parameterIndex="1" mode="3" enabled="1" defaultValue="0.82499999">
-                        <blocks/>
-                    </automationTrack>
-                    <automationTrack parameterIndex="2" mode="3" enabled="1" defaultValue="0.82499999">
-                        <blocks/>
-                    </automationTrack>
-                    <automationTrack parameterIndex="3" mode="3" enabled="1" defaultValue="0.5">
-                        <blocks/>
-                    </automationTrack>
-                </automationTracks>
-            </automationContainer>
-            <sendsAutomationContainer>
-                <automationTracks/>
-                <state></state>
-            </sendsAutomationContainer>
-            <metaData>
-                <data key="TrackColor" value="#ff91c1"/>
-            </metaData>
-            <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
-            <blocks>
-                <block name="MIDI 3" position="501638" positionStart="0" positionEnd="88200" loopOffset="0" framesCount="88200" loopEnabled="0" groupId="4294967295" muted="0">
-                    <metaData>
-                        <data key="BlockColor" value="#ff91c1"/>
-                    </metaData>
-                    <blockData>AAAAEAAAAAAAAAAAAAArESRkAAAAAAABAABWIgAAKxEkZAAAAAAAAgAArEQAACsRJGQAAAAAAAMAAQJmAAArESRkAAA=</blockData>
-                    <automationBlocks/>
-                </block>
-            </blocks>
-            <midiUnits/>
-            <midiInstrument uid="AAAAAFNWMlRzeW5qAAAAAA==" vendor="Ymck" name="Magical8bitPlug2" sideChainBufferType="1">
-                <state>Q2NuSxQAAAAAAAAAAAAAAAAAAABDY25LAAAAAEZCQ2gAAAABAAAAAAABAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATrVkMyIeIEAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI.PiA8cm9vdD48UGFyYW1zPjxQQVJBTSBpZD0iYXJwZWdnaW9EaXJlY3Rpb24iIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9ImFycGVnZ2lvVGltZSIgdmFsdWU9IjAuMDI5OTk5OTk5MzI5NDQ3NzUiLz48UEFSQU0gaWQ9ImF0dGFjayIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iYmVuZFJhbmdlIiB2YWx1ZT0iMi4wIi8+PFBBUkFNIGlkPSJjb2xvclNjaGVtZSIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iZGVjYXkiIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9ImR1dHkiIHZhbHVlPSIxLjAiLz48UEFSQU0gaWQ9ImdhaW4iIHZhbHVlPSIwLjA5OTk5OTk5NDAzOTUzNTUyIi8+PFBBUkFNIGlkPSJpc0FkdmFuY2VkUGFuZWxPcGVuX3JhdyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iaXNBcnBlZ2dpb0VuYWJsZWRfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJpc0R1dHlTZXF1ZW5jZUVuYWJsZWRfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJpc1BpdGNoU2VxdWVuY2VFbmFibGVkX3JhdyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iaXNWb2x1bWVTZXF1ZW5jZUVuYWJsZWRfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJtYXhQb2x5IiB2YWx1ZT0iOC4wIi8+PFBBUkFNIGlkPSJub2lzZUFsZ29yaXRobV9yYXciIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9Im9zYyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0icGl0Y2hTZXF1ZW5jZU1vZGVfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJyZWxlYXNlIiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJyZXN0cmljdHNUb05FU0ZyZXF1ZW5jeV9yYXciIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9InN1c2xldmVsIiB2YWx1ZT0iMS4wIi8+PFBBUkFNIGlkPSJzd2VlcEluaXRpYWxQaXRjaCIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0ic3dlZXBUaW1lIiB2YWx1ZT0iMC4xMDAwMDAwMDE0OTAxMTYxIi8+PFBBUkFNIGlkPSJ2aWJyYXRvRGVsYXkiIHZhbHVlPSIwLjI5OTk5OTk4MjExODYwNjYiLz48UEFSQU0gaWQ9InZpYnJhdG9EZXB0aCIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0idmlicmF0b0lnbm9yZXNXaGVlbF9yYXciIHZhbHVlPSIxLjAiLz48UEFSQU0gaWQ9InZpYnJhdG9SYXRlIiB2YWx1ZT0iMC4xNTAwMDAwMDU5NjA0NjQ1Ii8+PC9QYXJhbXM+PHZvbHVtZUVudj48L3ZvbHVtZUVudj48cGl0Y2hFbnY+PC9waXRjaEVudj48ZHV0eUVudj48L2R1dHlFbnY+PC9yb290PgA=</state>
-                <automationContainer>
-                    <automationTracks/>
-                </automationContainer>
-                <metaData>
-                    <data key="AudioUnitCollapsedState" value="false"/>
-                    <data key="AudioUnitHParamIndex" value="-1"/>
-                    <data key="AudioUnitParameterOrder" value=""/>
-                    <data key="AudioUnitReadState" value="false"/>
-                    <data key="AudioUnitVParamIndex" value="-1"/>
-                </metaData>
-            </midiInstrument>
-            <midiInput externalDeviceIndex="0" channelIndex="-1"/>
-            <midiOutput externalDeviceIndex="-1" channelIndex="-1"/>
+            <audioInput externalDeviceIndex="-1" channelIndex="-1"/>
         </track>
         <midiMappings/>
     </masterTrack>
@@ -268,10 +453,10 @@
         <data key="TransportFollow" value="true"/>
         <data key="TransportLoop" value="true"/>
         <data key="TransportMetronome" value="false"/>
-        <data key="TransportPlayPositionL" value="88200"/>
-        <data key="TransportPlayPositionR" value="176400"/>
+        <data key="TransportPlayPositionL" value="793800"/>
+        <data key="TransportPlayPositionR" value="882000"/>
         <data key="TransportSnap" value="true"/>
         <data key="TransportSnapIndex" value="6"/>
     </metaData>
-    <timeline timeSigNumerator="4" timeSigDenominator="4" tempo="60"/>
+    <timeline timeSigNumerator="4" timeSigDenominator="4" tempo="240"/>
 </project>
