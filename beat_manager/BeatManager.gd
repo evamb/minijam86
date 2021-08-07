@@ -46,8 +46,9 @@ func _on_SongManager_beat() -> void:
 	print("beat")
 
 
-func _on_SongManager_beat_hit(input_delay: float, beat_index: int) -> void:
-	_hit_indicators[beat_index % _hit_indicators.size()].frame = 2 if abs(input_delay) > 0.15 else 1 
+func _on_SongManager_beat_hit(input_delay: float, beat_index: int, action: String) -> void:
+	_hit_indicators[beat_index % _hit_indicators.size()].frame =\
+		2 if abs(input_delay) > Globals.MISS_THRESHOLD else 1 
 	print("beat hit %s" % input_delay)
 
 

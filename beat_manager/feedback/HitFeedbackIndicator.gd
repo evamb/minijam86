@@ -9,15 +9,12 @@ enum Status {
 
 onready var _tween = $Tween
 
-func _ready() -> void:
-	pass # Replace with function body.
 
-
-func _on_SongManager_beat_hit(input_delay: float, beat_index: int) -> void:
+func _on_SongManager_beat_hit(input_delay: float, beat_index: int, action: String) -> void:
 	var frame = Status.PERFECT
-	if abs(input_delay) > 0.15:
+	if abs(input_delay) > Globals.MISS_THRESHOLD:
 		frame = Status.MISS
-	elif abs(input_delay) > 0.08:
+	elif abs(input_delay) > Globals.PERFECT_THRESHOLD:
 		if input_delay > 0:
 			frame = Status.TOO_SLOW
 		else:

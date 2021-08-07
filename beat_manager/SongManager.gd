@@ -54,8 +54,8 @@ func _on_beat(audio_stream: AudioStream) -> void:
 	_play_on_next_beat = false
 
 
-func _on_beat_hit(input_delay: float, beat_index: int) -> void:
-	emit_signal("beat_hit", input_delay, beat_index)
+func _on_beat_hit(input_delay: float, beat_index: int, action: String) -> void:
+	emit_signal("beat_hit", input_delay, beat_index, action)
 
 
 func _on_target_selected(time_remaining: float) -> void:

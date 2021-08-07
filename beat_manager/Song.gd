@@ -93,5 +93,11 @@ func update_time(time: float) -> void:
 
 		if deviation > _bar_duration / 2:
 			input_delay = _bar_duration - deviation
-
-		emit_signal("beat_hit", input_delay, _beat_index - 1)
+		var action = "arm_left"
+		if Input.is_action_just_pressed("arm_right"):
+			action = "arm_right"
+		elif Input.is_action_just_pressed("leg_left"):
+			action = "leg_left"
+		elif Input.is_action_just_pressed("leg_right"):
+			action = "leg_right"
+		emit_signal("beat_hit", input_delay, _beat_index - 1, action)

@@ -20,9 +20,17 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Minijam 86"
+config/name="Minijam 86 Sports"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[audio]
+
+output_latency.web=15
+
+[autoload]
+
+Globals="*res://Globals.gd"
 
 [display]
 
