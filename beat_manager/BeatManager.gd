@@ -15,7 +15,7 @@ func _ready() -> void:
 			_hit_indicators.append(hit_indicator)
 			add_child(hit_indicator)
 			hit_indicator.position.x = -1000
-			hit_indicator.position.y = _screen_size.y / 2.0
+
 
 func _get_configuration_warning() -> String:
 	if not $SongManager.song is Song:
@@ -25,7 +25,7 @@ func _get_configuration_warning() -> String:
 
 func _on_SongManager_beat() -> void:
 	print("beat")
-	_tween.interpolate_property(_indicator, "modulate", Color.greenyellow, Color.white, 0.5)
+	_tween.interpolate_method(self, "_highlight_indicator", Color.greenyellow, Color.white, 0.5)
 
 
 func _on_SongManager_beat_hit(input_delay: float) -> void:
@@ -40,10 +40,24 @@ func _move_indicator(x: float) -> void:
 	_indicator.position.x = x
 
 
-func _on_SongManager_bar_selected(bar: PoolRealArray, beat: float) -> void:
-	_tween.interpolate_method(self, "_move_indicator", 0, _screen_size.x, beat)
+func _show_indicator(a: float) -> void:
+	_indicator.modulate.a = a
+
+
+func _highlight_indicator(c: Color) -> void:
+	_indicator.modulate.r = c.r
+	_indicator.modulate.g = c.g
+	_indicator.modulate.b = c.b
+
+
+func _on_SongManager_bar_selected(bar: PoolRealArray, bar_duration: float, first_note_offset: float) -> void:
+	var tween_duration = bar_duration - bar_duration * first_note_offset * 2
+	if first_note_offset > 0:
+		_tween.interpolate_method(self, "_show_indicator", 0, 1, tween_duration)
+	_tween.interpolate_method(self, "_move_indicator", first_note_offset * _screen_size.x, _screen_size.x, tween_duration)
 	_tween.start()
 	var offset = (1.0 - bar[bar.size() - 1]) / 2.0
+	print("new bar with offset %s, note offset: %s" % [offset, first_note_offset])
 	for i in _hit_indicators.size():
 		if i < bar.size():
 			_hit_indicators[i].position.x = _screen_size.x * offset + bar[i] * _screen_size.x
