@@ -6,10 +6,10 @@
 
 [resource]
 script = ExtResource( 1 )
-beats_per_minute = 60.0
-audio_streams = [ ExtResource( 3 ), ExtResource( 2 ) ]
+beats_per_minute = 120.0
+audio_streams = [ ExtResource( 2 ), ExtResource( 3 ) ]
 bars = {
 0: PoolRealArray( 0, 0.25, 0.375, 0.5, 0.75 ),
 1: PoolRealArray( 0, 0.25, 0.5, 0.75 )
 }
-song = PoolIntArray( 1, 0, 0, 1, 0, 1, 0, 1, 0, 1 )
+song = PoolIntArray( 1, 0, 0, 1 )

@@ -6,7 +6,7 @@ signal beat_hit
 signal beat
 signal target_selected
 signal bar_selected
-signal song_complete
+signal song_completed
 
 
 var _prev_deviation = -1.0
@@ -24,12 +24,11 @@ export (PoolIntArray) var song
 
 func reset() -> void:
 	_bar_duration = 4.0 / (beats_per_minute / 60.0)
-#	_prev_deviation = -1.0
-#	_cur_bar_index = 0
-#	_cur_note_index = 0
-#	_cur_target_time = 0.0
-#	_next_split_time = 0.0
-#	_bar_duration = 0.0
+	_prev_deviation = -1.0
+	_cur_bar_index = 0
+	_cur_note_index = 0
+	_cur_target_time = 0.0
+	_next_split_time = 0.0
 
 
 func _next_target() -> float:
@@ -43,10 +42,9 @@ func _next_target() -> float:
 		next_note_index = 0
 		next_bar_index += 1
 	if next_bar_index >= song.size():
-		emit_signal("song_complete")
+		emit_signal("song_completed")
 		return 0.0
-			
-	
+
 	var next_bar: PoolRealArray = bars[song[next_bar_index]]
 	var cur_note = _cur_bar_index * _bar_duration + cur_bar[_cur_note_index] * _bar_duration
 	var next_note = next_bar_index * _bar_duration + next_bar[next_note_index] * _bar_duration
@@ -56,6 +54,7 @@ func _next_target() -> float:
 	_cur_note_index = next_note_index
 	return next_note
 
+
 func update_time(time: float) -> void:
 	if time >= _next_split_time:
 		var next_target_time = _next_target()
@@ -64,13 +63,12 @@ func update_time(time: float) -> void:
 	
 	var deviation = time - _cur_target_time
 	if _prev_deviation < 0 and deviation >= 0:
-		emit_signal("beat")
+		emit_signal("beat", audio_streams[song[_cur_bar_index]])
 
 	_prev_deviation = deviation
 	# leave one bar for intro
 	if _cur_bar_index < 1:
 		return
-
 
 
 	if Input.is_action_just_pressed("beat_input"):

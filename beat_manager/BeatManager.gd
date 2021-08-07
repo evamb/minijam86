@@ -4,20 +4,19 @@ extends Node2D
 var _hit_indicators = []
 var _hit_indicator_index = 0
 var _indicator_width = 1000
-
 export(float) var _indicator_screen_percentage = 0.5
 
 onready var _tween = $Tween
 onready var _indicator = $BeatIndicator
 onready var _screen_size = get_viewport().size
-onready var _hit_indicator_scene = preload("res://beat_manager/hit_indicator/HitIndicator.tscn")
+onready var HitIndicator = preload("res://beat_manager/hit_indicator/HitIndicator.tscn")
 
 func _ready() -> void:
 	_indicator_width = _screen_size.x * _indicator_screen_percentage
 	if not Engine.editor_hint:
 		_indicator.position.x = -_indicator_width * 0.25
 		for i in 10:
-			var hit_indicator = _hit_indicator_scene.instance()
+			var hit_indicator = HitIndicator.instance()
 			_hit_indicators.append(hit_indicator)
 			_indicator.add_child(hit_indicator)
 			hit_indicator.position.x = -1000
@@ -84,3 +83,7 @@ func _on_SongManager_bar_selected(bar: PoolRealArray, bar_duration: float, first
 #		else:
 #			_hit_indicators[i].position.x = -1000
 
+
+
+func _on_SongManager_song_completed() -> void:
+	_indicator.position.x = -_indicator_width * 0.25
