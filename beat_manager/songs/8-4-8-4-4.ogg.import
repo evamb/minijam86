@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/8-4-8-4-4.ogg-dd2e1834f533e0d607e21e987ad10ae4.oggstr"
+
+[deps]
+
+source_file="res://beat_manager/songs/8-4-8-4-4.ogg"
+dest_files=[ "res://.import/8-4-8-4-4.ogg-dd2e1834f533e0d607e21e987ad10ae4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
