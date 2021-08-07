@@ -14,11 +14,12 @@ var time_delay
 
 
 func _ready() -> void:
-	song.ready();
+	song.reset();
 	song.connect("beat", self, "_on_beat")
 	song.connect("beat_hit", self, "_on_beat_hit")
 	song.connect("target_selected", self, "_on_target_selected")
 	song.connect("bar_selected", self, "_on_bar_selected")
+	song.connect("song_completed", self, "_on_song_completed")
 	time_begin = OS.get_ticks_usec()
 	time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
 
@@ -45,3 +46,9 @@ func _on_target_selected(time_remaining: float, cur_target_time: float, next_tar
 
 func _on_bar_selected(bar: PoolRealArray, bar_duration: float, first_note_offset: float) -> void:
 	emit_signal("bar_selected", bar, bar_duration, first_note_offset)
+
+
+func _on_song_completed() -> void:
+	song.reset()
+	time_begin = OS.get_ticks_usec()
+	time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()

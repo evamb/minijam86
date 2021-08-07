@@ -22,9 +22,14 @@ export (Dictionary) var bars
 export (PoolIntArray) var song
 
 
-func ready() -> void:
+func reset() -> void:
 	_bar_duration = 4.0 / (beats_per_minute / 60.0)
-	
+#	_prev_deviation = -1.0
+#	_cur_bar_index = 0
+#	_cur_note_index = 0
+#	_cur_target_time = 0.0
+#	_next_split_time = 0.0
+#	_bar_duration = 0.0
 
 
 func _next_target() -> float:

@@ -1,16 +1,22 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://beat_manager/BeatManager.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://beat_manager/hit_indicator/GradientMask.tres" type="Texture" id=2]
 [ext_resource path="res://beat_manager/songs/SimpleSong.tres" type="Resource" id=3]
 [ext_resource path="res://beat_manager/SongManager.gd" type="Script" id=4]
 [ext_resource path="res://beat_manager/BeatIndicator.gd" type="Script" id=5]
 
 [node name="BeatManager" type="Node2D"]
 script = ExtResource( 1 )
+_indicator_screen_percentage = 0.33
 
-[node name="BeatIndicator" type="Sprite" parent="."]
+[node name="Light2D" type="Light2D" parent="."]
+scale = Vector2( 4, 1080 )
 texture = ExtResource( 2 )
+mode = 3
+range_item_cull_mask = 2
+
+[node name="BeatIndicator" type="Node2D" parent="."]
 script = ExtResource( 5 )
 
 [node name="SongManager" type="Node" parent="."]
