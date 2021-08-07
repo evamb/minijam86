@@ -6,6 +6,7 @@ signal beat
 signal target_selected
 signal bar_selected
 signal song_completed
+signal offset_updated
 
 export (Resource) var song
 
@@ -25,6 +26,7 @@ func _ready() -> void:
 	song.connect("target_selected", self, "_on_target_selected")
 	song.connect("bar_selected", self, "_on_bar_selected")
 	song.connect("song_completed", self, "_on_song_completed")
+	song.connect("offset_updated", self, "_on_offset_updated")
 	_time_begin = OS.get_ticks_usec()
 	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
 	set_process(true)
@@ -50,12 +52,12 @@ func _on_beat_hit(input_delay: float) -> void:
 	emit_signal("beat_hit", input_delay)
 
 
-func _on_target_selected(time_remaining: float, cur_target_time: float, next_target_time: float) -> void:
-	emit_signal("target_selected", time_remaining, cur_target_time, next_target_time)
+func _on_target_selected(time_remaining: float) -> void:
+	emit_signal("target_selected", time_remaining)
 
 
-func _on_bar_selected(bar: PoolRealArray, bar_duration: float, first_note_offset: float) -> void:
-	emit_signal("bar_selected", bar, bar_duration, first_note_offset)
+func _on_bar_selected(bar: PoolRealArray) -> void:
+	emit_signal("bar_selected", bar)
 	_play_on_next_beat = true
 
 
@@ -67,3 +69,7 @@ func _on_song_completed() -> void:
 	_time_begin = OS.get_ticks_usec()
 	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
 #	set_process(true)
+
+
+func _on_offset_updated(time: float) -> void:
+	emit_signal("offset_updated", time)
