@@ -50,17 +50,23 @@ func _on_SongManager_beat_hit(input_delay: float) -> void:
 	print("beat hit %s" % input_delay)
 
 
-func _on_SongManager_target_selected(time_remaining: float, cur_target_time: float, next_target_time: float) -> void:
+func _on_SongManager_target_selected(time_remaining: float) -> void:
 	var cur_index = (_hit_indicator_index + 1) % _hit_indicators.size()
-	_note_index = (_note_index + 1) % _notes.size()
-	_hit_indicators[cur_index].position.x = _notes[_note_index] * _indicator_width * _bar_duration
+	_note_index += 1
+	var offset = $SongManager.song.song.size() * (_note_index / _notes.size())
+	_hit_indicators[cur_index].position.x = _indicator_width * _bar_duration\
+		* (offset + _notes[_note_index % _notes.size()])
 	_hit_indicator_index = cur_index
 
 
-func _on_SongManager_bar_selected(bar: PoolRealArray, bar_duration: float, first_note_offset: float) -> void:
+func _on_SongManager_bar_selected(bar: PoolRealArray) -> void:
 	_indicator.set_speed(_indicator_width)
 
 
 func _on_SongManager_song_completed() -> void:
 	_indicator.position.x = 0
 	_reset_indicators()
+
+
+func _on_SongManager_offset_updated(time: float) -> void:
+	pass # Replace with function body.
