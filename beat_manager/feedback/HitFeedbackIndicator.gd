@@ -13,7 +13,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-func _on_SongManager_beat_hit(input_delay: float) -> void:
+func _on_SongManager_beat_hit(input_delay: float, beat_index: int) -> void:
 	var frame = Status.PERFECT
 	if abs(input_delay) > 0.15:
 		frame = Status.MISS

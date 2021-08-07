@@ -16,6 +16,7 @@ var _next_split_time = 0.0
 var _bar_duration = 0.0
 var _offset = 0.0
 var _was_triggered = false
+var _beat_index = 0
 
 export (float) var beats_per_minute = 60.0
 export (Array, AudioStream) var audio_streams
@@ -75,6 +76,7 @@ func _next_target(time: float) -> float:
 func update_time(time: float) -> void:
 	if time >= _next_split_time:
 		var next_target_time = _next_target(time)
+		_beat_index += 1
 		var duration_to_next_split = _next_split_time - time
 		emit_signal("target_selected", duration_to_next_split)
 	
@@ -92,4 +94,4 @@ func update_time(time: float) -> void:
 		if deviation > _bar_duration / 2:
 			input_delay = _bar_duration - deviation
 
-		emit_signal("beat_hit", input_delay)
+		emit_signal("beat_hit", input_delay, _beat_index - 1)

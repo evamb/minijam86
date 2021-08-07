@@ -46,7 +46,8 @@ func _on_SongManager_beat() -> void:
 	print("beat")
 
 
-func _on_SongManager_beat_hit(input_delay: float) -> void:
+func _on_SongManager_beat_hit(input_delay: float, beat_index: int) -> void:
+	_hit_indicators[beat_index % _hit_indicators.size()].frame = 2 if abs(input_delay) > 0.15 else 1 
 	print("beat hit %s" % input_delay)
 
 
@@ -56,6 +57,7 @@ func _on_SongManager_target_selected(time_remaining: float) -> void:
 	var offset = $SongManager.song.song.size() * (_note_index / _notes.size())
 	_hit_indicators[cur_index].position.x = _indicator_width * _bar_duration\
 		* (offset + _notes[_note_index % _notes.size()])
+	_hit_indicators[cur_index].frame = 0
 	_hit_indicator_index = cur_index
 
 
