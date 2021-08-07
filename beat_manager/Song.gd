@@ -15,6 +15,7 @@ var _cur_target_time = 0.0
 var _next_split_time = 0.0
 var _bar_duration = 0.0
 var _offset = 0.0
+var _was_triggered = false
 
 export (float) var beats_per_minute = 60.0
 export (Array, AudioStream) var audio_streams
@@ -43,6 +44,7 @@ func get_notes() -> PoolRealArray:
 
 
 func _next_target(time: float) -> float:
+	_was_triggered = false
 	var cur_bar = bars[song[_cur_bar_index]]
 	if _cur_note_index == 0:
 		emit_signal("bar_selected", cur_bar)
@@ -83,7 +85,8 @@ func update_time(time: float) -> void:
 
 	_prev_deviation = deviation
 
-	if Input.is_action_just_pressed("beat_input"):
+	if Input.is_action_just_pressed("beat_input") and not _was_triggered:
+		_was_triggered = true
 		var input_delay = deviation
 
 		if deviation > _bar_duration / 2:

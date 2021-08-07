@@ -7,6 +7,7 @@ signal target_selected
 signal bar_selected
 signal song_completed
 signal offset_updated
+signal started
 
 export (Resource) var song
 
@@ -19,7 +20,7 @@ onready var _audio_player = $AudioStreamPlayer
 
 func _ready() -> void:
 	set_process(false)
-	yield(get_tree().create_timer(4.0), "timeout")
+	yield(self, "started")
 	song.reset();
 	song.connect("beat", self, "_on_beat")
 	song.connect("beat_hit", self, "_on_beat_hit")
@@ -30,6 +31,11 @@ func _ready() -> void:
 	_time_begin = OS.get_ticks_usec()
 	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
 	set_process(true)
+
+
+func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("beat_input"):
+		emit_signal("started")
 
 
 func _process(delta: float) -> void:
