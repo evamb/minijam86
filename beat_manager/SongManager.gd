@@ -17,6 +17,8 @@ onready var _audio_player = $AudioStreamPlayer
 
 
 func _ready() -> void:
+	set_process(false)
+	yield(get_tree().create_timer(4.0), "timeout")
 	song.reset();
 	song.connect("beat", self, "_on_beat")
 	song.connect("beat_hit", self, "_on_beat_hit")
@@ -25,6 +27,7 @@ func _ready() -> void:
 	song.connect("song_completed", self, "_on_song_completed")
 	_time_begin = OS.get_ticks_usec()
 	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
+	set_process(true)
 
 
 func _process(delta: float) -> void:
