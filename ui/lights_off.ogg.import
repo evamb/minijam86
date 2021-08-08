@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lights_off.ogg-7d5bb8a85bfc6a7f26f4ce49349a372f.oggstr"
+
+[deps]
+
+source_file="res://ui/lights_off.ogg"
+dest_files=[ "res://.import/lights_off.ogg-7d5bb8a85bfc6a7f26f4ce49349a372f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
