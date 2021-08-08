@@ -30,9 +30,7 @@ stream = ExtResource( 6 )
 
 [node name="Tween" type="Tween" parent="."]
 
-[connection signal="bar_selected" from="SongManager" to="." method="_on_SongManager_bar_selected"]
 [connection signal="beat" from="SongManager" to="." method="_on_SongManager_beat"]
 [connection signal="beat_hit" from="SongManager" to="." method="_on_SongManager_beat_hit"]
-[connection signal="offset_updated" from="SongManager" to="." method="_on_SongManager_offset_updated"]
-[connection signal="song_completed" from="SongManager" to="." method="_on_SongManager_song_completed"]
+[connection signal="started" from="SongManager" to="." method="_on_SongManager_started"]
 [connection signal="target_selected" from="SongManager" to="." method="_on_SongManager_target_selected"]

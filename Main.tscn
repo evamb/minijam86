@@ -28,7 +28,7 @@ animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "default",
-"speed": 10.0
+"speed": 8.0
 } ]
 
 [node name="Main" type="Node2D"]
@@ -58,7 +58,9 @@ position = Vector2( 960, 592 )
 [node name="OxygenManager" parent="." instance=ExtResource( 6 )]
 position = Vector2( 960, 696 )
 
-[connection signal="beat_hit" from="BeatManager/SongManager" to="HitFeedbackIndicator" method="_on_SongManager_beat_hit"]
+[connection signal="beat_clock" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_clock"]
 [connection signal="beat_hit" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_hit"]
+[connection signal="beat_hit" from="BeatManager/SongManager" to="HitFeedbackIndicator" method="_on_SongManager_beat_hit"]
+[connection signal="started" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_started"]
 
 [editable path="BeatManager"]

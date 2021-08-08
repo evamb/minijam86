@@ -1,4 +1,3 @@
-tool
 extends Node2D
 
 var _hit_indicators = []
@@ -19,39 +18,29 @@ onready var HitIndicator = preload("res://beat_manager/hit_indicator/HitIndicato
 
 func _ready() -> void:
 	_indicator_width = _screen_size.x * _indicator_screen_percentage
-	if not Engine.editor_hint:
-		_indicator.position.x = 0
-		for i in min(10, _notes.size()):
-			var hit_indicator = HitIndicator.instance()
-			_hit_indicators.append(hit_indicator)
-			_indicator.add_child(hit_indicator)
-			hit_indicator.position.x = -1000
-			if i < 5:
-				var hit_indicator_pos = _notes[i] * _indicator_width * _bar_duration
-				_hit_indicators[i].position.x = hit_indicator_pos
-				_note_index = i
-				_hit_indicator_index = i
-
-
-
-
-func _get_configuration_warning() -> String:
-	if not $SongManager.song is Song:
-		return "Song manager must have a valid song"
-	return ""
+	_indicator.position.x = 0
+	for i in min(15, _notes.size()):
+		var hit_indicator = HitIndicator.instance()
+		_hit_indicators.append(hit_indicator)
+		_indicator.add_child(hit_indicator)
+		hit_indicator.position.x = -2000
+		if i < 5:
+			var hit_indicator_pos = _notes[i] * _indicator_width * _bar_duration
+			_hit_indicators[i].position.x = hit_indicator_pos
+			_note_index = i
+			_hit_indicator_index = i
 
 
 func _on_SongManager_beat() -> void:
 	print("beat")
 
 
-func _on_SongManager_beat_hit(input_delay: float, beat_index: int, action: String) -> void:
+func _on_SongManager_beat_hit(input_delay: float, beat_index: int, _action: String) -> void:
 	_hit_indicators[beat_index % _hit_indicators.size()].frame =\
 		2 if abs(input_delay) > Globals.MISS_THRESHOLD else 1 
-	print("beat hit %s" % input_delay)
 
 
-func _on_SongManager_target_selected(time_remaining: float) -> void:
+func _on_SongManager_target_selected(_time_remaining: float) -> void:
 	var cur_index = (_hit_indicator_index + 1) % _hit_indicators.size()
 	_note_index += 1
 	var easy_offset = 1 if _note_index >= _notes.size() else 0
@@ -66,9 +55,5 @@ func _on_SongManager_target_selected(time_remaining: float) -> void:
 	_hit_indicator_index = cur_index
 
 
-func _on_SongManager_bar_selected(bar: PoolRealArray) -> void:
+func _on_SongManager_started(_bpm: float) -> void:
 	_indicator.set_speed(_indicator_width)
-
-
-func _on_SongManager_offset_updated(time: float) -> void:
-	pass # Replace with function body.
