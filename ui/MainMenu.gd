@@ -1,5 +1,7 @@
 extends ColorRect
 
+export (String) var target_scene = "res://ui/Manual.tscn"
+
 onready var q = $HBoxContainer/Q
 onready var e = $HBoxContainer/E
 onready var a = $HBoxContainer/A
@@ -40,4 +42,4 @@ func _process(delta: float) -> void:
 
 func _start_game() -> void:
 	yield(_audio_player, "finished")
-	get_tree().change_scene("res://Main.tscn")
+	get_tree().change_scene(target_scene)
