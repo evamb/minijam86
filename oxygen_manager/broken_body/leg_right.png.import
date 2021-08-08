@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/right_leg.png-d9a10aeb36ce7f1a4081caffbc523b22.stex"
+path="res://.import/leg_right.png-2e3579898f9ba33390b2b4fec4eb0aaf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://oxygen_manager/broken_body/right_leg.png"
-dest_files=[ "res://.import/right_leg.png-d9a10aeb36ce7f1a4081caffbc523b22.stex" ]
+source_file="res://oxygen_manager/broken_body/leg_right.png"
+dest_files=[ "res://.import/leg_right.png-2e3579898f9ba33390b2b4fec4eb0aaf.stex" ]
 
 [params]
 

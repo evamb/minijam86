@@ -26,6 +26,12 @@ onready var _limb_labels = {
 	"leg_right": $LegRightLabel,
 	"leg_left": $LegLeftLabel,
 }
+onready var _dead_limb_sprites = {
+	"arm_left": $ArmLeft/Broken,
+	"arm_right": $ArmRight/Broken,
+	"leg_right": $LegRight/Broken,
+	"leg_left": $LegLeft/Broken,
+}
 onready var _tween = $Tween
 onready var Oxygen = preload("res://oxygen_manager/Oxygen.tscn")
 
@@ -70,6 +76,8 @@ func _update_labels(limb_oxygen_count) -> void:
 		if limb_oxygen_count[limb] <= 0:
 			dying_limbs.append(limb)
 			emit_signal("limb_died", limb)
+			_tween.interpolate_property(_dead_limb_sprites[limb], "modulate", Color.transparent, Color.white, 1)
+			_tween.start()
 			_limb_labels[limb].text = "X"
 		else:
 			_limb_labels[limb].text = str(limb_oxygen_count[limb])
