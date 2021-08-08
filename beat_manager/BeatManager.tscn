@@ -27,6 +27,7 @@ song = ExtResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SongManager"]
 stream = ExtResource( 6 )
+volume_db = -12.0
 
 [node name="Tween" type="Tween" parent="."]
 

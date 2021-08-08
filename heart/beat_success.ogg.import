@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/beat_success.ogg-53b74e13371e466b2aed4e032be64039.oggstr"
+
+[deps]
+
+source_file="res://heart/beat_success.ogg"
+dest_files=[ "res://.import/beat_success.ogg-53b74e13371e466b2aed4e032be64039.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

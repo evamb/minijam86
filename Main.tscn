@@ -63,8 +63,9 @@ position = Vector2( 960, 592 )
 position = Vector2( 960, 696 )
 
 [connection signal="beat_clock" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_clock"]
-[connection signal="beat_hit" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_hit"]
 [connection signal="beat_hit" from="BeatManager/SongManager" to="HitFeedbackIndicator" method="_on_SongManager_beat_hit"]
+[connection signal="beat_hit" from="BeatManager/SongManager" to="Heart" method="_on_SongManager_beat_hit"]
+[connection signal="beat_hit" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_hit"]
 [connection signal="started" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_started"]
 
 [editable path="BeatManager"]
