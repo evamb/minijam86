@@ -79,9 +79,9 @@ margin_bottom = 1024.0
 text = "D"
 
 [connection signal="beat_clock" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_clock"]
-[connection signal="beat_hit" from="BeatManager/SongManager" to="HitFeedbackIndicator" method="_on_SongManager_beat_hit"]
-[connection signal="beat_hit" from="BeatManager/SongManager" to="Heart" method="_on_SongManager_beat_hit"]
 [connection signal="beat_hit" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_hit"]
+[connection signal="beat_hit" from="BeatManager/SongManager" to="Heart" method="_on_SongManager_beat_hit"]
+[connection signal="beat_hit" from="BeatManager/SongManager" to="HitFeedbackIndicator" method="_on_SongManager_beat_hit"]
 [connection signal="failed" from="BeatManager/SongManager" to="BeatManager" method="_on_SongManager_failed"]
 [connection signal="failed" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_failed"]
 [connection signal="started" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_started"]

@@ -42,12 +42,12 @@
             <data key="TrackColor" value="#91ffab"/>
         </metaData>
         <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
-        <track name="Hard" type="4" armed="0" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
-            <state>AAAAAD9TMzM.UzMzPwAAAA==</state>
+        <track name="Hard" type="4" armed="1" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
+            <state>PwAAAD9TMzM.UzMzPwAAAA==</state>
             <audioUnits/>
             <automationContainer>
                 <automationTracks>
-                    <automationTrack parameterIndex="0" mode="3" enabled="1" defaultValue="0">
+                    <automationTrack parameterIndex="0" mode="3" enabled="1" defaultValue="0.5">
                         <blocks/>
                     </automationTrack>
                     <automationTrack parameterIndex="1" mode="3" enabled="1" defaultValue="0.82499999">
@@ -66,6 +66,7 @@
                 <state></state>
             </sendsAutomationContainer>
             <metaData>
+                <data key="TrackAutoArmed" value="true"/>
                 <data key="TrackColor" value="#ab91ff"/>
             </metaData>
             <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
@@ -151,7 +152,7 @@
             <midiInput externalDeviceIndex="0" channelIndex="-1"/>
             <midiOutput externalDeviceIndex="-1" channelIndex="-1"/>
         </track>
-        <track name="Easy" type="4" armed="1" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
+        <track name="Easy" type="4" armed="0" monitored="1" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0">
             <state>PwAAAD9TMzM.UzMzPwAAAA==</state>
             <audioUnits/>
             <automationContainer>
@@ -175,7 +176,6 @@
                 <state></state>
             </sendsAutomationContainer>
             <metaData>
-                <data key="TrackAutoArmed" value="true"/>
                 <data key="TrackColor" value="#ab91ff"/>
             </metaData>
             <audioOutput externalDeviceIndex="-1" channelIndex="-1"/>
@@ -460,8 +460,8 @@
         <data key="TransportFollow" value="true"/>
         <data key="TransportLoop" value="true"/>
         <data key="TransportMetronome" value="false"/>
-        <data key="TransportPlayPositionL" value="0"/>
-        <data key="TransportPlayPositionR" value="11025"/>
+        <data key="TransportPlayPositionL" value="352800"/>
+        <data key="TransportPlayPositionR" value="374850"/>
         <data key="TransportSnap" value="true"/>
         <data key="TransportSnapIndex" value="6"/>
     </metaData>

@@ -7,7 +7,7 @@ onready var e = $HBoxContainer/E
 onready var a = $HBoxContainer/A
 onready var d = $HBoxContainer/D
 onready var _audio_player = $AudioStreamPlayer
-
+onready var _tween = $Tween
 
 var _pressed = {
 	"q": false,
@@ -37,9 +37,12 @@ func _process(delta: float) -> void:
 	for val in _pressed.values():
 		if not val:
 			return
+	set_process(false)
 	_start_game()
 
 
 func _start_game() -> void:
-	yield(_audio_player, "finished")
+	_tween.interpolate_property(self, "modulate", Color.white, Color.black, 1)
+	_tween.start()
+	yield(_tween, "tween_completed")
 	get_tree().change_scene(target_scene)
