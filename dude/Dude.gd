@@ -27,6 +27,6 @@ func _on_OxygenManager_limb_died(limb: String) -> void:
 	_dead_limbs.append(limb)
 
 
-func _on_OxygenManager_died() -> void:
+func _on_OxygenManager_died(_reason: String, _count: int) -> void:
 	for elem in parts.values():
 		elem.stop()

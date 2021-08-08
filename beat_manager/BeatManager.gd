@@ -62,7 +62,7 @@ func _on_SongManager_started(_bpm: float) -> void:
 	_indicator.set_speed(_indicator_width)
 
 
-func _on_OxygenManager_died() -> void:
+func _on_OxygenManager_died(_reason: String, _count: int) -> void:
 	var tween_time = 4.0
 	_tween.interpolate_method(self, "_end_game", 0, 0.99, tween_time, Tween.TRANS_CUBIC, Tween.EASE_OUT)
 	_tween.start()
