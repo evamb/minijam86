@@ -5,7 +5,6 @@ onready var e = $HBoxContainer/E
 onready var a = $HBoxContainer/A
 onready var d = $HBoxContainer/D
 onready var _audio_player = $AudioStreamPlayer
-onready var _stream_last = preload("res://ui/guitar_last.ogg")
 onready var _tween = $Tween
 
 var _pressed = {
