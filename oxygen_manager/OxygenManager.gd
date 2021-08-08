@@ -43,6 +43,11 @@ onready var _next_dance_timer = $NextDanceTimer
 onready var Oxygen = preload("res://oxygen_manager/Oxygen.tscn")
 
 
+func kill() -> void:
+	_tween.stop_all()
+	emit_signal("died")
+	
+
 func _ready() -> void:
 	randomize()
 	_prepare_dance()
@@ -82,7 +87,6 @@ func _spawn_oxygen(input_action) -> void:
 
 func _update_labels(limb_oxygen_count) -> void:
 	var keys = _limb_labels.keys()
-	var dying_limbs = []
 	for limb in keys:
 		if limb_oxygen_count[limb] <= 0:
 			_limb_labels[limb].text = "OK!"
@@ -129,7 +133,7 @@ func _check_limbs() -> void:
 			_limb_labels[limb].text = "X"
 			_limb_labels.erase(limb)
 	if _dead_limbs.size() == 4:
-		emit_signal("died")
+		kill()
 	else:
 		emit_signal("preparation_completed", _dance_move_index)
 		_prepare_dance()
@@ -147,3 +151,7 @@ func _on_SongManager_beat_clock() -> void:
 	if not _has_started or _limb_labels.size() == 0:
 		return
 	_dance_move_label.text = str(_clock_count)
+
+
+func _on_SongManager_failed(_beat_index: int) -> void:
+	kill()

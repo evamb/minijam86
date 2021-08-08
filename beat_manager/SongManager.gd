@@ -7,6 +7,7 @@ signal beat_clock
 signal target_selected
 signal bar_selected
 signal started
+signal failed
 
 export (Resource) var song
 
@@ -18,12 +19,16 @@ var _beat_clock_duration = 0.0
 
 onready var _audio_player = $AudioStreamPlayer
 
-
 func _ready() -> void:
+	set_physics_process(false)
+	set_process(false)
+
+
+func _on_Startup_started() -> void:
+	set_physics_process(true)
 	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
 	_time_begin = OS.get_ticks_usec()
 	_audio_player.play()
-	set_process(false)
 	_beat_clock_duration = 60.0 / song.beats_per_minute
 	yield(self, "started")
 	song.reset();
@@ -31,14 +36,19 @@ func _ready() -> void:
 	song.connect("beat_hit", self, "_on_beat_hit")
 	song.connect("target_selected", self, "_on_target_selected")
 	song.connect("bar_selected", self, "_on_bar_selected")
+	song.connect("failed", self, "_on_failed")
 	_time_begin = OS.get_ticks_usec()
 	set_process(true)
 
+
+func _on_failed(beat_index: int) -> void:
+	emit_signal("failed", beat_index)
 
 func _physics_process(_delta: float) -> void:
 	var time = (OS.get_ticks_usec() - _time_begin) / 1_000_000.0
 	time -= _time_delay
 	time = max(0, time)
+	# TODO: starts too soon on web
 	if time >= 8.0:
 		emit_signal("started", song.beats_per_minute)
 		set_physics_process(false)
@@ -54,7 +64,7 @@ func _process(_delta: float) -> void:
 	song.update_time(time)
 
 
-func _on_beat(audio_stream: AudioStream) -> void:
+func _on_beat(_audio_stream: AudioStream) -> void:
 	emit_signal("beat")
 #	if _play_on_next_beat:
 #		_audio_player.stream = audio_stream
@@ -73,3 +83,4 @@ func _on_target_selected(time_remaining: float) -> void:
 func _on_bar_selected(bar: PoolRealArray) -> void:
 	emit_signal("bar_selected", bar)
 	_play_on_next_beat = true
+

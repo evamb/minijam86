@@ -27,5 +27,5 @@ func _on_SongManager_beat_hit(input_delay: float, _index: int, _action: String) 
 		_audio_player.stream = _stream_success
 	else:
 		_audio_player.stream = _stream_miss
-	_audio_player.play()
+		_audio_player.play()
 		

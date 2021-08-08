@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://beat_manager/BeatManager.tscn" type="PackedScene" id=1]
 [ext_resource path="res://level/background.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://beat_manager/feedback/HitFeedbackIndicator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://oxygen_manager/OxygenManager.tscn" type="PackedScene" id=6]
 [ext_resource path="res://dude/Dude.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Startup.gd" type="Script" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 4 )
@@ -49,7 +50,7 @@ position = Vector2( 960, 690 )
 position = Vector2( 960, 540 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Dude" parent="." instance=ExtResource( 7 )]
@@ -62,14 +63,21 @@ position = Vector2( 960, 592 )
 [node name="OxygenManager" parent="." instance=ExtResource( 6 )]
 position = Vector2( 960, 696 )
 
+[node name="Startup" type="Node" parent="."]
+pause_mode = 2
+script = ExtResource( 8 )
+
 [connection signal="beat_clock" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_clock"]
+[connection signal="beat_hit" from="BeatManager/SongManager" to="HitFeedbackIndicator" method="_on_SongManager_beat_hit"]
 [connection signal="beat_hit" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_hit"]
 [connection signal="beat_hit" from="BeatManager/SongManager" to="Heart" method="_on_SongManager_beat_hit"]
-[connection signal="beat_hit" from="BeatManager/SongManager" to="HitFeedbackIndicator" method="_on_SongManager_beat_hit"]
+[connection signal="failed" from="BeatManager/SongManager" to="BeatManager" method="_on_SongManager_failed"]
+[connection signal="failed" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_failed"]
 [connection signal="started" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_started"]
 [connection signal="died" from="OxygenManager" to="BeatManager" method="_on_OxygenManager_died"]
 [connection signal="died" from="OxygenManager" to="Dude" method="_on_OxygenManager_died"]
 [connection signal="limb_died" from="OxygenManager" to="Dude" method="_on_OxygenManager_limb_died"]
 [connection signal="preparation_completed" from="OxygenManager" to="Dude" method="_on_OxygenManager_preparation_completed"]
+[connection signal="started" from="Startup" to="BeatManager/SongManager" method="_on_Startup_started"]
 
 [editable path="BeatManager"]

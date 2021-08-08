@@ -342,29 +342,41 @@ script = ExtResource( 5 )
 [node name="ArmRight" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
 frames = SubResource( 9 )
-animation = "dance_2_dead"
+animation = "dance_1_alive"
+frame = 1
+playing = true
 
 [node name="ArmLeft" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
 frames = SubResource( 18 )
-animation = "dance_2_dead"
+animation = "dance_1_alive"
+frame = 1
+playing = true
 
 [node name="Body" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
 frames = SubResource( 27 )
-animation = "dance_2_dead"
+animation = "dance_1_alive"
+frame = 1
+playing = true
 
 [node name="LegLeft" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
 frames = SubResource( 36 )
-animation = "dance_2_dead"
+animation = "dance_1_alive"
+frame = 1
+playing = true
 
 [node name="LegRight" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
 frames = SubResource( 45 )
-animation = "dance_2_dead"
+animation = "dance_1_alive"
+frame = 1
+playing = true
 
 [node name="Head" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
 frames = SubResource( 54 )
-animation = "dance_2_dead"
+animation = "dance_1_alive"
+frame = 1
+playing = true
