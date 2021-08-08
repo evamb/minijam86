@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="dance_dude_music" version="1" revision="0" sampleRate="44100" sampleFormat="5" tempo="240" timesigNumerator="4" timesigDenominator="4">
+<project name="dance_dude_music" version="1" revision="0" sampleRate="44100" sampleFormat="5" tempo="60" timesigNumerator="4" timesigDenominator="4">
     <pool>
         <audioSources>
             <audioSource fileName="loop_from_8s_210807-225332_0.wav"/>
@@ -255,11 +255,11 @@
             <midiOutput externalDeviceIndex="-1" channelIndex="-1"/>
         </track>
         <track name="loop_from_8s" type="3" armed="0" monitored="0" automationArmed="0" audioUnitsBypass="0" latencyOffset="0" inverse="0" channelCount="2" pitchTempoProcessorMode="1" timeStretchEnabled="1">
-            <state>PwAAAD76XjY.UzMzPwAAAA==</state>
+            <state>AAAAAD76XjY.UzMzPwAAAA==</state>
             <audioUnits/>
             <automationContainer>
                 <automationTracks>
-                    <automationTrack parameterIndex="0" mode="3" enabled="1" defaultValue="0.5">
+                    <automationTrack parameterIndex="0" mode="3" enabled="1" defaultValue="0">
                         <blocks/>
                     </automationTrack>
                     <automationTrack parameterIndex="1" mode="3" enabled="1" defaultValue="0.48900002">
@@ -460,10 +460,10 @@
         <data key="TransportFollow" value="true"/>
         <data key="TransportLoop" value="true"/>
         <data key="TransportMetronome" value="false"/>
-        <data key="TransportPlayPositionL" value="970200"/>
-        <data key="TransportPlayPositionR" value="1014300"/>
+        <data key="TransportPlayPositionL" value="0"/>
+        <data key="TransportPlayPositionR" value="11025"/>
         <data key="TransportSnap" value="true"/>
         <data key="TransportSnapIndex" value="6"/>
     </metaData>
-    <timeline timeSigNumerator="4" timeSigDenominator="4" tempo="240"/>
+    <timeline timeSigNumerator="4" timeSigDenominator="4" tempo="60"/>
 </project>

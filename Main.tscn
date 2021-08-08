@@ -1,39 +1,15 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://beat_manager/BeatManager.tscn" type="PackedScene" id=1]
 [ext_resource path="res://level/background.png" type="Texture" id=2]
 [ext_resource path="res://heart/Heart.tscn" type="PackedScene" id=3]
-[ext_resource path="res://level/crowd.png" type="Texture" id=4]
+[ext_resource path="res://level/Crowd.tscn" type="PackedScene" id=4]
 [ext_resource path="res://beat_manager/feedback/HitFeedbackIndicator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://oxygen_manager/OxygenManager.tscn" type="PackedScene" id=6]
 [ext_resource path="res://dude/Dude.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Startup.gd" type="Script" id=8]
 [ext_resource path="res://Main.gd" type="Script" id=9]
 [ext_resource path="res://ui/Key.tscn" type="PackedScene" id=10]
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 320, 180 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 4 )
-region = Rect2( 320, 0, 320, 180 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 4 )
-region = Rect2( 640, 0, 320, 180 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 4 )
-region = Rect2( 960, 0, 320, 180 )
-
-[sub_resource type="SpriteFrames" id=5]
-animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
-"loop": true,
-"name": "default",
-"speed": 8.0
-} ]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 9 )
@@ -49,12 +25,8 @@ position = Vector2( 960, 690 )
 [node name="Heart" parent="." instance=ExtResource( 3 )]
 position = Vector2( 960, 690 )
 
-[node name="Crowd" type="AnimatedSprite" parent="."]
-position = Vector2( 960, 540 )
-scale = Vector2( 6, 6 )
-frames = SubResource( 5 )
+[node name="Crowd" parent="." instance=ExtResource( 4 )]
 frame = 2
-playing = true
 
 [node name="Dude" parent="." instance=ExtResource( 7 )]
 position = Vector2( 952, 216 )
@@ -109,9 +81,9 @@ text = "D"
 [connection signal="failed" from="BeatManager/SongManager" to="BeatManager" method="_on_SongManager_failed"]
 [connection signal="failed" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_failed"]
 [connection signal="started" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_started"]
-[connection signal="died" from="OxygenManager" to="." method="_on_OxygenManager_died"]
-[connection signal="died" from="OxygenManager" to="Dude" method="_on_OxygenManager_died"]
 [connection signal="died" from="OxygenManager" to="BeatManager" method="_on_OxygenManager_died"]
+[connection signal="died" from="OxygenManager" to="Dude" method="_on_OxygenManager_died"]
+[connection signal="died" from="OxygenManager" to="." method="_on_OxygenManager_died"]
 [connection signal="limb_died" from="OxygenManager" to="Dude" method="_on_OxygenManager_limb_died"]
 [connection signal="preparation_completed" from="OxygenManager" to="Dude" method="_on_OxygenManager_preparation_completed"]
 [connection signal="started" from="Startup" to="BeatManager/SongManager" method="_on_Startup_started"]
