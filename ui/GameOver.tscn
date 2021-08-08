@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fonts/FreePixel.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ui/lights_off.ogg" type="AudioStream" id=2]
 [ext_resource path="res://ui/GameOver.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=3]
@@ -107,6 +108,9 @@ custom_fonts/font = SubResource( 4 )
 text = "Main menu"
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 
 [connection signal="button_up" from="CenterContainer/VBoxContainer/HBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_button_up"]
 [connection signal="button_up" from="CenterContainer/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_MenuButton_button_up"]
