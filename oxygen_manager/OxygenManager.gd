@@ -37,6 +37,7 @@ onready var _dead_limb_sprites = {
 }
 onready var _tween = $Tween
 onready var _dance_move_label = $DanceMoveLabel
+onready var _next_dance_timer = $NextDanceTimer
 onready var Oxygen = preload("res://oxygen_manager/Oxygen.tscn")
 
 
@@ -68,13 +69,13 @@ func _spawn_oxygen(input_action) -> void:
 	
 	var oxygen = Oxygen.instance()
 	add_child(oxygen)
+	_limb_oxygen_count[action] -= 1
+	emit_signal("oxygen_updated", _limb_oxygen_count)
 	_tween.interpolate_property(oxygen, "position", Vector2.ZERO, _limb_locations[action].position, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	_tween.interpolate_property(oxygen, "modulate", Color.white, Color.transparent, 0.5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	_tween.start()
 	yield(get_tree().create_timer(0.5), "timeout")
 	oxygen.queue_free()
-	_limb_oxygen_count[action] -= 1
-	emit_signal("oxygen_updated", _limb_oxygen_count)
 
 
 func _update_labels(limb_oxygen_count) -> void:
@@ -90,6 +91,7 @@ func _update_labels(limb_oxygen_count) -> void:
 
 func _on_SongManager_started(_bpm: float) -> void:
 	_has_started = true
+	_animate_timer()
 
 
 func _prepare_dance() -> void:
@@ -105,6 +107,12 @@ func _prepare_dance() -> void:
 	
 	emit_signal("oxygen_updated", _limb_oxygen_count)
 	_clock_count = 7
+	_animate_timer()
+
+
+func _animate_timer() -> void:
+	_tween.interpolate_method(self, "_scale_timer", 1.0, 0.0, 8)
+	_tween.start()
 
 
 func _check_limbs() -> void:
@@ -113,7 +121,7 @@ func _check_limbs() -> void:
 		if _limb_oxygen_count[limb] > 0:
 			_dead_limbs.append(limb)
 			emit_signal("limb_died", limb)
-			_tween.interpolate_property(_dead_limb_sprites[limb], "modulate", Color.transparent, Color.white, 1)
+			_tween.interpolate_property(_dead_limb_sprites[limb], "modulate", Color.transparent, Color.white, 0.5)
 			_tween.start()
 			_limb_labels[limb].text = "X"
 			_limb_labels.erase(limb)
@@ -121,6 +129,10 @@ func _check_limbs() -> void:
 		emit_signal("died")
 	else:
 		_prepare_dance()
+
+
+func _scale_timer(x: float) -> void:
+	_next_dance_timer.scale.x = x
 
 
 func _on_SongManager_beat_clock() -> void:

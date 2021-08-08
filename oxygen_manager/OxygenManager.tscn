@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://oxygen_manager/OxygenManager.gd" type="Script" id=1]
 [ext_resource path="res://fonts/FreePixelFont.tres" type="DynamicFont" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://oxygen_manager/broken_body/arm_left.png" type="Texture" id=4]
 [ext_resource path="res://oxygen_manager/broken_body/arm_right.png" type="Texture" id=5]
 [ext_resource path="res://oxygen_manager/broken_body/leg_right.png" type="Texture" id=6]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 900
 
 [node name="OxygenManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -97,6 +104,7 @@ __meta__ = {
 }
 
 [node name="DanceMoveLabel" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -112,3 +120,8 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="NextDanceTimer" type="Sprite" parent="."]
+position = Vector2( 0, -256 )
+scale = Vector2( 1, 10 )
+texture = SubResource( 2 )
