@@ -1,13 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fonts/FreePixel.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://ui/guitar.ogg" type="AudioStream" id=2]
 [ext_resource path="res://ui/MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://fonts/FreePixelFont.tres" type="DynamicFont" id=4]
 [ext_resource path="res://dude/Dude.tscn" type="PackedScene" id=5]
+[ext_resource path="res://level/Crowd.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ui/start_background.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 112
+outline_color = Color( 0.635294, 0.639216, 0.709804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
 outline_color = Color( 0.635294, 0.639216, 0.709804, 1 )
 font_data = ExtResource( 1 )
 
@@ -20,35 +27,54 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/separation = 50
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture = ExtResource( 7 )
+stretch_mode = 1
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="."]
+margin_top = -32.0
 margin_right = 1920.0
-margin_bottom = 515.0
+margin_bottom = 483.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 1 )
 text = "Dance, Dude!"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 565.0
+[node name="Press" type="Label" parent="."]
+margin_top = 608.0
 margin_right = 1920.0
-margin_bottom = 1080.0
+margin_bottom = 1123.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 2 )
+text = "Press"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 400.0
+margin_right = 1920.0
+margin_bottom = 1480.0
 size_flags_vertical = 3
 custom_constants/separation = 100
 alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Q" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Q" type="Label" parent="HBoxContainer"]
 margin_right = 405.0
-margin_bottom = 515.0
+margin_bottom = 1080.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 custom_fonts/font = ExtResource( 4 )
@@ -56,10 +82,10 @@ text = "Q"
 align = 1
 valign = 1
 
-[node name="E" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="E" type="Label" parent="HBoxContainer"]
 margin_left = 505.0
 margin_right = 910.0
-margin_bottom = 515.0
+margin_bottom = 1080.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 custom_fonts/font = ExtResource( 4 )
@@ -67,10 +93,10 @@ text = "E"
 align = 1
 valign = 1
 
-[node name="A" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="A" type="Label" parent="HBoxContainer"]
 margin_left = 1010.0
 margin_right = 1415.0
-margin_bottom = 515.0
+margin_bottom = 1080.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 custom_fonts/font = ExtResource( 4 )
@@ -78,10 +104,10 @@ text = "A"
 align = 1
 valign = 1
 
-[node name="D" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="D" type="Label" parent="HBoxContainer"]
 margin_left = 1515.0
 margin_right = 1920.0
-margin_bottom = 515.0
+margin_bottom = 1080.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 custom_fonts/font = ExtResource( 4 )
@@ -94,5 +120,10 @@ valign = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 
+[node name="Crowd" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0, 392 )
+frame = 0
+centered = false
+
 [node name="Dude" parent="." instance=ExtResource( 5 )]
-position = Vector2( 960, 560 )
+position = Vector2( 960, 600 )

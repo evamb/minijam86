@@ -1,9 +1,9 @@
 extends ColorRect
 
-onready var q = $VBoxContainer/HBoxContainer/Q
-onready var e = $VBoxContainer/HBoxContainer/E
-onready var a = $VBoxContainer/HBoxContainer/A
-onready var d = $VBoxContainer/HBoxContainer/D
+onready var q = $HBoxContainer/Q
+onready var e = $HBoxContainer/E
+onready var a = $HBoxContainer/A
+onready var d = $HBoxContainer/D
 onready var _audio_player = $AudioStreamPlayer
 
 
