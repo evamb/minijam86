@@ -31,6 +31,8 @@ func reset() -> void:
 	_cur_target_time = 0.0
 	_next_split_time = 0.0
 	_offset = 0.0
+	_was_triggered = false
+	_beat_index = 0
 
 
 func get_notes(easy = true) -> PoolRealArray:

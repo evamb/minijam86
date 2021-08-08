@@ -44,9 +44,9 @@ onready var _next_dance_timer = $NextDanceTimer
 onready var Oxygen = preload("res://oxygen_manager/Oxygen.tscn")
 
 
-func kill() -> void:
+func kill(reason: String) -> void:
 	_tween.stop_all()
-	emit_signal("died")
+	emit_signal("died", reason, _total_clock_count)
 	
 
 func _ready() -> void:
@@ -135,7 +135,7 @@ func _check_limbs() -> void:
 			_limb_labels[limb].text = "X"
 			_limb_labels.erase(limb)
 	if _dead_limbs.size() == 4:
-		kill()
+		kill("oxygen")
 	else:
 		emit_signal("preparation_completed", _dance_move_index)
 		_prepare_dance()
@@ -157,4 +157,4 @@ func _on_SongManager_beat_clock() -> void:
 
 
 func _on_SongManager_failed(_beat_index: int) -> void:
-	kill()
+	kill("note")
