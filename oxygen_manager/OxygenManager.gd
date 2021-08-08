@@ -67,13 +67,15 @@ func _on_SongManager_beat_hit(input_delay: float, _beat_index: int, action: Stri
 	else:
 		_spawn_oxygen(action)
 		yield(get_tree().create_timer(0.25), "timeout")
-		_spawn_oxygen(action)
+		_spawn_oxygen(action, false)
 
 
-func _spawn_oxygen(input_action) -> void:
-	var possible_actions = _dead_limbs.duplicate()
-	possible_actions.append(input_action)
-	var action = possible_actions[randi() % possible_actions.size()]
+func _spawn_oxygen(input_action: String, allow_random: bool = true) -> void:
+	var action = input_action
+	if allow_random:
+		var possible_actions = _dead_limbs.duplicate()
+		possible_actions.append(input_action)
+		action = possible_actions[randi() % possible_actions.size()]
 	
 	var oxygen = Oxygen.instance()
 	add_child(oxygen)
@@ -107,9 +109,10 @@ func _prepare_dance() -> void:
 	_limb_oxygen_count = requirements.duplicate()
 	var living_limbs = _limb_labels.keys()
 	var extra_difficulty = min((_total_clock_count / 32) * living_limbs.size(), 3 * living_limbs.size())
-#	var rest_oxygen = 0
-#	for dead in _dead_limbs:
-#		rest_oxygen += _limb_oxygen_count[dead]
+	var rest_oxygen = 0
+	for dead in _dead_limbs:
+		rest_oxygen += _limb_oxygen_count[dead]
+	extra_difficulty += rest_oxygen / 2
 	while extra_difficulty > 0:
 		extra_difficulty -= 1
 		_limb_oxygen_count[living_limbs[randi() % living_limbs.size()]] += 1
