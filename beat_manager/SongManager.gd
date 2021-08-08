@@ -5,7 +5,6 @@ signal beat_hit
 signal beat
 signal target_selected
 signal bar_selected
-signal song_completed
 signal offset_updated
 signal started
 
@@ -71,16 +70,6 @@ func _on_target_selected(time_remaining: float) -> void:
 func _on_bar_selected(bar: PoolRealArray) -> void:
 	emit_signal("bar_selected", bar)
 	_play_on_next_beat = true
-
-
-func _on_song_completed() -> void:
-	emit_signal("song_completed")
-#	set_process(false)
-#	yield(get_tree(), "idle_frame")
-	song.reset()
-	_time_begin = OS.get_ticks_usec()
-	_time_delay = AudioServer.get_time_to_next_mix() + AudioServer.get_output_latency()
-#	set_process(true)
 
 
 func _on_offset_updated(time: float) -> void:
