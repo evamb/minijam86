@@ -76,7 +76,3 @@ func _on_OxygenManager_died(_reason: String, _count: int) -> void:
 func _end_game(progress: float) -> void:
 	_audio_player.pitch_scale = 1 - progress
 	_indicator.set_speed(_indicator_width * (1 - progress))
-
-
-func _on_SongManager_failed(beat_index: int) -> void:
-	_hit_indicators[(beat_index - 1) % _hit_indicators.size()].frame = 2
