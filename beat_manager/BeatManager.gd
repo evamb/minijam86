@@ -20,9 +20,8 @@ onready var _audio_player = $SongManager/AudioStreamPlayer
 
 func _ready() -> void:
 	_indicator_width = _screen_size.x * _indicator_screen_percentage
+	_indicator.position.x = _indicator_width * 8.1
 	_indicator.set_speed(_indicator_width)
-	var offset = 7.8
-	_indicator.position.x = _indicator_width * offset
 	for i in min(15, _notes.size()):
 		var hit_indicator = HitIndicator.instance()
 		_hit_indicators.append(hit_indicator)
@@ -77,3 +76,7 @@ func _on_OxygenManager_died() -> void:
 func _end_game(progress: float) -> void:
 	_audio_player.pitch_scale = 1 - progress
 	_indicator.set_speed(_indicator_width * (1 - progress))
+
+
+func _on_SongManager_failed(beat_index: int) -> void:
+	_hit_indicators[(beat_index - 1) % _hit_indicators.size()].frame = 2

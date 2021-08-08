@@ -4,6 +4,7 @@ signal oxygen_updated
 signal limb_died
 signal died
 signal beat_clock
+signal preparation_completed
 
 var _limb_oxygen_count = {
 	"arm_left": 2,
@@ -16,6 +17,8 @@ var _has_started = false
 var _dead_limbs = []
 var _dance_prepared = false
 var _clock_count = 0
+var _dance_move_index = 0
+var _total_clock_count = 0
 
 onready var _limb_locations = {
 	"arm_left": $ArmLeft,
@@ -40,6 +43,11 @@ onready var _dance_move_label = $DanceMoveLabel
 onready var _next_dance_timer = $NextDanceTimer
 onready var Oxygen = preload("res://oxygen_manager/Oxygen.tscn")
 
+
+func kill() -> void:
+	_tween.stop_all()
+	emit_signal("died")
+	
 
 func _ready() -> void:
 	randomize()
@@ -80,7 +88,6 @@ func _spawn_oxygen(input_action) -> void:
 
 func _update_labels(limb_oxygen_count) -> void:
 	var keys = _limb_labels.keys()
-	var dying_limbs = []
 	for limb in keys:
 		if limb_oxygen_count[limb] <= 0:
 			_limb_labels[limb].text = "OK!"
@@ -95,15 +102,17 @@ func _on_SongManager_started(_bpm: float) -> void:
 
 
 func _prepare_dance() -> void:
-	var requirements = Globals.DANCE_MOVES[randi() % Globals.DANCE_MOVES.size()]
+	_dance_move_index = randi() % Globals.DANCE_MOVES.size()
+	var requirements = Globals.DANCE_MOVES[_dance_move_index]
 	_limb_oxygen_count = requirements.duplicate()
+	var living_limbs = _limb_labels.keys()
+	var extra_difficulty = min((_total_clock_count / 32) * living_limbs.size(), 3 * living_limbs.size())
 #	var rest_oxygen = 0
 #	for dead in _dead_limbs:
 #		rest_oxygen += _limb_oxygen_count[dead]
-#	var living_limbs = _limb_labels.keys()
-#	while rest_oxygen > 0:
-#		rest_oxygen -= 1
-#		_limb_oxygen_count[living_limbs[randi() % living_limbs.size()]] += 1
+	while extra_difficulty > 0:
+		extra_difficulty -= 1
+		_limb_oxygen_count[living_limbs[randi() % living_limbs.size()]] += 1
 	
 	emit_signal("oxygen_updated", _limb_oxygen_count)
 	_clock_count = 7
@@ -126,8 +135,9 @@ func _check_limbs() -> void:
 			_limb_labels[limb].text = "X"
 			_limb_labels.erase(limb)
 	if _dead_limbs.size() == 4:
-		emit_signal("died")
+		kill()
 	else:
+		emit_signal("preparation_completed", _dance_move_index)
 		_prepare_dance()
 
 
@@ -136,6 +146,7 @@ func _scale_timer(x: float) -> void:
 
 
 func _on_SongManager_beat_clock() -> void:
+	_total_clock_count += 1
 	_clock_count -= 1
 	emit_signal("beat_clock")
 	if _clock_count < 0:
@@ -143,3 +154,7 @@ func _on_SongManager_beat_clock() -> void:
 	if not _has_started or _limb_labels.size() == 0:
 		return
 	_dance_move_label.text = str(_clock_count)
+
+
+func _on_SongManager_failed(_beat_index: int) -> void:
+	kill()

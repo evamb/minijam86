@@ -5,6 +5,7 @@ signal beat_hit
 signal beat
 signal target_selected
 signal bar_selected
+signal failed
 
 var _prev_deviation = -1.0
 var _cur_bar_index = 0
@@ -73,6 +74,9 @@ func _next_target() -> void:
 
 func update_time(time: float) -> void:
 	if time >= _next_split_time:
+		# tolerance for first hit
+		if not _was_triggered and _beat_index > 1:
+			emit_signal("failed", _beat_index)
 		_next_target()
 		_beat_index += 1
 		var duration_to_next_split = _next_split_time - time
