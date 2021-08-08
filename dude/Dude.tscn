@@ -15,27 +15,27 @@ atlas = ExtResource( 2 )
 region = Rect2( 32, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 32, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 4 )
+atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 4 )
+atlas = ExtResource( 3 )
 region = Rect2( 32, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 32, 0, 32, 64 )
 
 [sub_resource type="SpriteFrames" id=9]
@@ -47,51 +47,51 @@ animations = [ {
 }, {
 "frames": [ SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
-"name": "dance_1_dead",
+"name": "dance_2_alive",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
-"name": "dance_2_dead",
+"name": "dance_1_dead",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
-"name": "dance_2_alive",
+"name": "dance_2_dead",
 "speed": 2.0
 } ]
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
-region = Rect2( 128, 0, 32, 64 )
+region = Rect2( 64, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
-region = Rect2( 160, 0, 32, 64 )
+region = Rect2( 96, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 3 )
-region = Rect2( 128, 0, 32, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 3 )
-region = Rect2( 160, 0, 32, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 4 )
-region = Rect2( 128, 0, 32, 64 )
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 4 )
-region = Rect2( 160, 0, 32, 64 )
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 1 )
-region = Rect2( 128, 0, 32, 64 )
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 1 )
-region = Rect2( 160, 0, 32, 64 )
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 64 )
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
@@ -102,161 +102,51 @@ animations = [ {
 }, {
 "frames": [ SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
-"name": "dance_1_dead",
+"name": "dance_2_alive",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
-"name": "dance_2_dead",
+"name": "dance_1_dead",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
-"name": "dance_2_alive",
-"speed": 2.0
-} ]
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 2 )
-region = Rect2( 64, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 2 )
-region = Rect2( 96, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 3 )
-region = Rect2( 64, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 3 )
-region = Rect2( 96, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 1 )
-region = Rect2( 64, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 32, 64 )
-
-[sub_resource type="SpriteFrames" id=27]
-animations = [ {
-"frames": [ SubResource( 19 ), SubResource( 20 ) ],
-"loop": true,
-"name": "dance_1_alive",
-"speed": 2.0
-}, {
-"frames": [ SubResource( 21 ), SubResource( 22 ) ],
-"loop": true,
-"name": "dance_1_dead",
-"speed": 2.0
-}, {
-"frames": [ SubResource( 23 ), SubResource( 24 ) ],
-"loop": true,
 "name": "dance_2_dead",
-"speed": 2.0
-}, {
-"frames": [ SubResource( 25 ), SubResource( 26 ) ],
-"loop": true,
-"name": "dance_2_alive",
-"speed": 2.0
-} ]
-
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 2 )
-region = Rect2( 192, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 2 )
-region = Rect2( 224, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 3 )
-region = Rect2( 192, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 3 )
-region = Rect2( 224, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 4 )
-region = Rect2( 192, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 4 )
-region = Rect2( 224, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 32, 64 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 1 )
-region = Rect2( 224, 0, 32, 64 )
-
-[sub_resource type="SpriteFrames" id=36]
-animations = [ {
-"frames": [ SubResource( 28 ), SubResource( 29 ) ],
-"loop": true,
-"name": "dance_1_alive",
-"speed": 2.0
-}, {
-"frames": [ SubResource( 30 ), SubResource( 31 ) ],
-"loop": true,
-"name": "dance_1_dead",
-"speed": 2.0
-}, {
-"frames": [ SubResource( 32 ), SubResource( 33 ) ],
-"loop": true,
-"name": "dance_2_dead",
-"speed": 2.0
-}, {
-"frames": [ SubResource( 34 ), SubResource( 35 ) ],
-"loop": true,
-"name": "dance_2_alive",
 "speed": 2.0
 } ]
 
 [sub_resource type="AtlasTexture" id=37]
 atlas = ExtResource( 2 )
-region = Rect2( 256, 0, 32, 64 )
+region = Rect2( 128, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=38]
 atlas = ExtResource( 2 )
-region = Rect2( 288, 0, 32, 64 )
+region = Rect2( 160, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 3 )
-region = Rect2( 256, 0, 32, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=40]
-atlas = ExtResource( 3 )
-region = Rect2( 288, 0, 32, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 160, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 4 )
-region = Rect2( 256, 0, 32, 64 )
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 4 )
-region = Rect2( 288, 0, 32, 64 )
+atlas = ExtResource( 3 )
+region = Rect2( 160, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 1 )
-region = Rect2( 256, 0, 32, 64 )
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 1 )
-region = Rect2( 288, 0, 32, 64 )
+atlas = ExtResource( 4 )
+region = Rect2( 160, 0, 32, 64 )
 
 [sub_resource type="SpriteFrames" id=45]
 animations = [ {
@@ -267,17 +157,127 @@ animations = [ {
 }, {
 "frames": [ SubResource( 39 ), SubResource( 40 ) ],
 "loop": true,
-"name": "dance_1_dead",
+"name": "dance_2_alive",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 41 ), SubResource( 42 ) ],
 "loop": true,
-"name": "dance_2_dead",
+"name": "dance_1_dead",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 43 ), SubResource( 44 ) ],
 "loop": true,
+"name": "dance_2_dead",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 224, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 224, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 3 )
+region = Rect2( 224, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 4 )
+region = Rect2( 192, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 4 )
+region = Rect2( 224, 0, 32, 64 )
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "dance_1_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
 "name": "dance_2_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "dance_1_dead",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "dance_2_dead",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 2 )
+region = Rect2( 256, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 2 )
+region = Rect2( 288, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 1 )
+region = Rect2( 288, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 3 )
+region = Rect2( 288, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 4 )
+region = Rect2( 256, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 4 )
+region = Rect2( 288, 0, 32, 64 )
+
+[sub_resource type="SpriteFrames" id=36]
+animations = [ {
+"frames": [ SubResource( 28 ), SubResource( 29 ) ],
+"loop": true,
+"name": "dance_1_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 30 ), SubResource( 31 ) ],
+"loop": true,
+"name": "dance_2_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 32 ), SubResource( 33 ) ],
+"loop": true,
+"name": "dance_1_dead",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 34 ), SubResource( 35 ) ],
+"loop": true,
+"name": "dance_2_dead",
 "speed": 2.0
 } ]
 
@@ -290,27 +290,27 @@ atlas = ExtResource( 2 )
 region = Rect2( 352, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=48]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 320, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=49]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 352, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=50]
-atlas = ExtResource( 4 )
+atlas = ExtResource( 3 )
 region = Rect2( 320, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=51]
-atlas = ExtResource( 4 )
+atlas = ExtResource( 3 )
 region = Rect2( 352, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=52]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 320, 0, 32, 64 )
 
 [sub_resource type="AtlasTexture" id=53]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 352, 0, 32, 64 )
 
 [sub_resource type="SpriteFrames" id=54]
@@ -322,17 +322,17 @@ animations = [ {
 }, {
 "frames": [ SubResource( 48 ), SubResource( 49 ) ],
 "loop": true,
-"name": "dance_1_dead",
+"name": "dance_2_alive",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 50 ), SubResource( 51 ) ],
 "loop": true,
-"name": "dance_2_dead",
+"name": "dance_1_dead",
 "speed": 2.0
 }, {
 "frames": [ SubResource( 52 ), SubResource( 53 ) ],
 "loop": true,
-"name": "dance_2_alive",
+"name": "dance_2_dead",
 "speed": 2.0
 } ]
 
@@ -346,30 +346,30 @@ animation = "dance_1_alive"
 frame = 1
 playing = true
 
-[node name="ArmLeft" type="AnimatedSprite" parent="."]
+[node name="Body" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
 frames = SubResource( 18 )
 animation = "dance_1_alive"
 frame = 1
 playing = true
 
-[node name="Body" type="AnimatedSprite" parent="."]
-scale = Vector2( 6, 6 )
-frames = SubResource( 27 )
-animation = "dance_1_alive"
-frame = 1
-playing = true
-
 [node name="LegLeft" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
-frames = SubResource( 36 )
+frames = SubResource( 45 )
 animation = "dance_1_alive"
 frame = 1
 playing = true
 
 [node name="LegRight" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
-frames = SubResource( 45 )
+frames = SubResource( 27 )
+animation = "dance_1_alive"
+frame = 1
+playing = true
+
+[node name="ArmLeft" type="AnimatedSprite" parent="."]
+scale = Vector2( 6, 6 )
+frames = SubResource( 36 )
 animation = "dance_1_alive"
 frame = 1
 playing = true
