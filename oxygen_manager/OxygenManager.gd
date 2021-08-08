@@ -95,13 +95,13 @@ func _on_SongManager_started(_bpm: float) -> void:
 func _prepare_dance() -> void:
 	var requirements = Globals.DANCE_MOVES[randi() % Globals.DANCE_MOVES.size()]
 	_limb_oxygen_count = requirements.duplicate()
-	var rest_oxygen = 0
-	for dead in _dead_limbs:
-		rest_oxygen += _limb_oxygen_count[dead]
-	var living_limbs = _limb_labels.keys()
-	while rest_oxygen > 0:
-		rest_oxygen -= 1
-		_limb_oxygen_count[living_limbs[randi() % living_limbs.size()]] += 1
+#	var rest_oxygen = 0
+#	for dead in _dead_limbs:
+#		rest_oxygen += _limb_oxygen_count[dead]
+#	var living_limbs = _limb_labels.keys()
+#	while rest_oxygen > 0:
+#		rest_oxygen -= 1
+#		_limb_oxygen_count[living_limbs[randi() % living_limbs.size()]] += 1
 	
 	emit_signal("oxygen_updated", _limb_oxygen_count)
 	_clock_count = 7
