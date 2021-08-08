@@ -108,7 +108,7 @@ func _prepare_dance() -> void:
 	var requirements = Globals.DANCE_MOVES[_dance_move_index]
 	_limb_oxygen_count = requirements.duplicate()
 	var living_limbs = _limb_labels.keys()
-	var extra_difficulty = min((_total_clock_count / 32) * living_limbs.size() * 2, 6 * living_limbs.size())
+	var extra_difficulty = min((_total_clock_count / 32) * living_limbs.size() * 2, 10 * living_limbs.size())
 	var rest_oxygen = 0
 	for dead in _dead_limbs:
 		rest_oxygen += _limb_oxygen_count[dead]
