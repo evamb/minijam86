@@ -53,7 +53,7 @@ position = Vector2( 960, 690 )
 position = Vector2( 960, 540 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 5 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="Dude" parent="." instance=ExtResource( 7 )]
@@ -109,8 +109,8 @@ text = "D"
 [connection signal="failed" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_failed"]
 [connection signal="failed" from="BeatManager/SongManager" to="BeatManager" method="_on_SongManager_failed"]
 [connection signal="started" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_started"]
-[connection signal="died" from="OxygenManager" to="." method="_on_OxygenManager_died"]
 [connection signal="died" from="OxygenManager" to="Dude" method="_on_OxygenManager_died"]
+[connection signal="died" from="OxygenManager" to="." method="_on_OxygenManager_died"]
 [connection signal="died" from="OxygenManager" to="BeatManager" method="_on_OxygenManager_died"]
 [connection signal="limb_died" from="OxygenManager" to="Dude" method="_on_OxygenManager_limb_died"]
 [connection signal="preparation_completed" from="OxygenManager" to="Dude" method="_on_OxygenManager_preparation_completed"]

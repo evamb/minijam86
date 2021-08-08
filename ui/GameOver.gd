@@ -25,4 +25,4 @@ func _on_PlayAgainButton_button_up() -> void:
 	
 	
 func _on_MenuButton_button_up() -> void:
-	pass
+	get_tree().change_scene("res://ui/MainMenu.tscn")
