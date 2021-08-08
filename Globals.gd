@@ -1,7 +1,7 @@
 extends Node
 
 const MISS_THRESHOLD = 0.15
-const PERFECT_THRESHOLD = 0.08
+const PERFECT_THRESHOLD = 0.05
 
 const DANCE_MOVES = [
 	{
@@ -17,9 +17,9 @@ const DANCE_MOVES = [
 		"leg_right": 2,
 	},
 	{
-		"arm_left": 3,
-		"arm_right": 3,
-		"leg_left": 4,
+		"arm_left": 2,
+		"arm_right": 4,
+		"leg_left": 2,
 		"leg_right": 4,
 	},
 ]
