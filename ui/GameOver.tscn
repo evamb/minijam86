@@ -4,17 +4,17 @@
 [ext_resource path="res://ui/lights_off.ogg" type="AudioStream" id=2]
 [ext_resource path="res://ui/GameOver.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 112
 outline_color = Color( 0.635294, 0.639216, 0.709804, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 96
 outline_color = Color( 0.635294, 0.639216, 0.709804, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 195
 outline_color = Color( 0.635294, 0.639216, 0.709804, 1 )
 font_data = ExtResource( 1 )
@@ -27,7 +27,7 @@ font_data = ExtResource( 1 )
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0.027451, 0.427451, 0.611765 )
+color = Color( 0, 0, 0, 0.823529 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -48,7 +48,7 @@ custom_constants/separation = 50
 margin_right = 1456.0
 margin_bottom = 112.0
 size_flags_vertical = 7
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Your heart stopped beating"
 align = 1
 valign = 1
@@ -58,7 +58,7 @@ margin_top = 162.0
 margin_right = 1456.0
 margin_bottom = 258.0
 size_flags_vertical = 7
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "after"
 align = 1
 valign = 1
@@ -68,7 +68,7 @@ margin_top = 308.0
 margin_right = 1456.0
 margin_bottom = 504.0
 size_flags_vertical = 7
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "75"
 align = 1
 valign = 1
@@ -78,7 +78,7 @@ margin_top = 554.0
 margin_right = 1456.0
 margin_bottom = 650.0
 size_flags_vertical = 7
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "dance moves!"
 align = 1
 valign = 1
