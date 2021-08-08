@@ -16,4 +16,10 @@ const DANCE_MOVES = [
 		"leg_left": 4,
 		"leg_right": 2,
 	},
+	{
+		"arm_left": 3,
+		"arm_right": 3,
+		"leg_left": 4,
+		"leg_right": 4,
+	},
 ]
