@@ -18,6 +18,7 @@ var _dead_limbs = []
 var _dance_prepared = false
 var _clock_count = 0
 var _dance_move_index = 0
+var _total_clock_count = 0
 
 onready var _limb_locations = {
 	"arm_left": $ArmLeft,
@@ -104,13 +105,14 @@ func _prepare_dance() -> void:
 	_dance_move_index = randi() % Globals.DANCE_MOVES.size()
 	var requirements = Globals.DANCE_MOVES[_dance_move_index]
 	_limb_oxygen_count = requirements.duplicate()
+	var living_limbs = _limb_labels.keys()
+	var extra_difficulty = min((_total_clock_count / 32) * living_limbs.size(), 3 * living_limbs.size())
 #	var rest_oxygen = 0
 #	for dead in _dead_limbs:
 #		rest_oxygen += _limb_oxygen_count[dead]
-#	var living_limbs = _limb_labels.keys()
-#	while rest_oxygen > 0:
-#		rest_oxygen -= 1
-#		_limb_oxygen_count[living_limbs[randi() % living_limbs.size()]] += 1
+	while extra_difficulty > 0:
+		extra_difficulty -= 1
+		_limb_oxygen_count[living_limbs[randi() % living_limbs.size()]] += 1
 	
 	emit_signal("oxygen_updated", _limb_oxygen_count)
 	_clock_count = 7
@@ -144,6 +146,7 @@ func _scale_timer(x: float) -> void:
 
 
 func _on_SongManager_beat_clock() -> void:
+	_total_clock_count += 1
 	_clock_count -= 1
 	emit_signal("beat_clock")
 	if _clock_count < 0:
