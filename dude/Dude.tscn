@@ -1,41 +1,210 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=33 format=2]
 
-[ext_resource path="res://dude/dude.png" type="Texture" id=1]
+[ext_resource path="res://dude/dance2.png" type="Texture" id=1]
+[ext_resource path="res://dude/dance1.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 32, 64 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "dance_1_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "dance_2_alive",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 2 )
+region = Rect2( 160, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 160, 0, 32, 64 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "dance_1_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "dance_2_alive",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 32, 64 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "dance_1_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "dance_2_alive",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 2 )
+region = Rect2( 224, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 224, 0, 32, 64 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "dance_1_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "dance_2_alive",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 2 )
+region = Rect2( 256, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 2 )
+region = Rect2( 288, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 288, 0, 32, 64 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 27 ), SubResource( 28 ) ],
+"loop": true,
+"name": "dance_1_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "dance_2_alive",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 2 )
+region = Rect2( 352, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 32, 64 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 352, 0, 32, 64 )
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "dance_1_alive",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "dance_2_alive",
+"speed": 2.0
+} ]
 
 [node name="Dude" type="Node2D"]
 
-[node name="ArmRight" type="Sprite" parent="."]
+[node name="ArmRight" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 32, 64 )
+frames = SubResource( 3 )
+animation = "dance_1_alive"
 
-[node name="ArmLeft" type="Sprite" parent="."]
+[node name="ArmLeft" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 32, 0, 32, 64 )
+frames = SubResource( 6 )
+animation = "dance_1_alive"
 
-[node name="Body" type="Sprite" parent="."]
+[node name="Body" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 64, 0, 32, 64 )
+frames = SubResource( 9 )
+animation = "dance_1_alive"
 
-[node name="LegLeft" type="Sprite" parent="."]
+[node name="LegLeft" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 96, 0, 32, 64 )
+frames = SubResource( 12 )
+animation = "dance_1_alive"
 
-[node name="LegRight" type="Sprite" parent="."]
+[node name="LegRight" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 128, 0, 32, 64 )
+frames = SubResource( 15 )
+animation = "dance_1_alive"
 
-[node name="Head" type="Sprite" parent="."]
+[node name="Head" type="AnimatedSprite" parent="."]
 scale = Vector2( 6, 6 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 160, 0, 32, 64 )
+frames = SubResource( 18 )
+animation = "dance_1_alive"
