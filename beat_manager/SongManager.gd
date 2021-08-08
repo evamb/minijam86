@@ -54,7 +54,7 @@ func _process(_delta: float) -> void:
 	song.update_time(time)
 
 
-func _on_beat(_audio_stream: AudioStream) -> void:
+func _on_beat(audio_stream: AudioStream) -> void:
 	emit_signal("beat")
 #	if _play_on_next_beat:
 #		_audio_player.stream = audio_stream

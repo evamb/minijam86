@@ -6,6 +6,7 @@ var _indicator_width = 1000
 var _note_index = 0
 export(float) var _indicator_screen_percentage = 0.5
 
+onready var HitIndicator = preload("res://beat_manager/hit_indicator/HitIndicator.tscn")
 onready var _tween = $Tween
 onready var _indicator = $BeatIndicator
 onready var _screen_size = Vector2(
@@ -14,16 +15,19 @@ onready var _screen_size = Vector2(
 onready var _notes = $SongManager.song.get_notes()
 onready var _hard_notes = $SongManager.song.get_notes(false)
 onready var _bar_duration = 4.0 / ($SongManager.song.beats_per_minute / 60.0)
-onready var HitIndicator = preload("res://beat_manager/hit_indicator/HitIndicator.tscn")
+onready var _audio_player = $SongManager/AudioStreamPlayer
+
 
 func _ready() -> void:
 	_indicator_width = _screen_size.x * _indicator_screen_percentage
-	_indicator.position.x = 0
+	_indicator.set_speed(_indicator_width)
+	var offset = 7.8
+	_indicator.position.x = _indicator_width * offset
 	for i in min(15, _notes.size()):
 		var hit_indicator = HitIndicator.instance()
 		_hit_indicators.append(hit_indicator)
 		_indicator.add_child(hit_indicator)
-		hit_indicator.position.x = -2000
+		hit_indicator.global_position.x = -2000
 		if i < 5:
 			var hit_indicator_pos = _notes[i] * _indicator_width * _bar_duration
 			_hit_indicators[i].position.x = hit_indicator_pos
@@ -57,3 +61,19 @@ func _on_SongManager_target_selected(_time_remaining: float) -> void:
 
 func _on_SongManager_started(_bpm: float) -> void:
 	_indicator.set_speed(_indicator_width)
+
+
+func _on_OxygenManager_died() -> void:
+	var tween_time = 4.0
+	_tween.interpolate_method(self, "_end_game", 0, 0.99, tween_time, Tween.TRANS_CUBIC, Tween.EASE_OUT)
+	_tween.start()
+	$SongManager.set_process(false)
+	yield(_tween, "tween_completed")
+	_audio_player.stop()
+	_indicator.set_process(false)
+	# play "clack"
+
+
+func _end_game(progress: float) -> void:
+	_audio_player.pitch_scale = 1 - progress
+	_indicator.set_speed(_indicator_width * (1 - progress))

@@ -1,15 +1,18 @@
 extends Node2D
 
 signal oxygen_updated
+signal limb_died
+signal died
 
 var _limb_oxygen_count = {
-	"arm_left": 0,
-	"arm_right": 0,
-	"leg_right": 0,
-	"leg_left": 0,
+	"arm_left": 2,
+	"arm_right": 2,
+	"leg_right": 2,
+	"leg_left": 2,
 }
 var _limb_index = 0
 var _has_started = false
+var _dead_limbs = []
 
 onready var _limb_locations = {
 	"arm_left": $ArmLeft,
@@ -28,7 +31,9 @@ onready var Oxygen = preload("res://oxygen_manager/Oxygen.tscn")
 
 
 func _ready() -> void:
-	pass
+	_update_labels(_limb_oxygen_count)
+# warning-ignore:return_value_discarded
+	connect("oxygen_updated", self, "_update_labels")
 
 
 func _on_SongManager_beat_hit(input_delay: float, _beat_index: int, action: String) -> void:
@@ -42,7 +47,11 @@ func _on_SongManager_beat_hit(input_delay: float, _beat_index: int, action: Stri
 		_spawn_oxygen(action)
 
 
-func _spawn_oxygen(action) -> void:
+func _spawn_oxygen(input_action) -> void:
+	var possible_actions = _dead_limbs.duplicate()
+	possible_actions.append(input_action)
+	var action = possible_actions[randi() % possible_actions.size()]
+	
 	var oxygen = Oxygen.instance()
 	add_child(oxygen)
 	_tween.interpolate_property(oxygen, "position", Vector2.ZERO, _limb_locations[action].position, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
@@ -52,23 +61,34 @@ func _spawn_oxygen(action) -> void:
 	oxygen.queue_free()
 	_limb_oxygen_count[action] += 1
 	emit_signal("oxygen_updated", _limb_oxygen_count)
-	_update_labels()
 
 
-func _update_labels() -> void:
+func _update_labels(limb_oxygen_count) -> void:
 	var keys = _limb_labels.keys()
+	var dying_limbs = []
 	for limb in keys:
-		_limb_labels[limb].text = str(_limb_oxygen_count[limb])
-
+		if limb_oxygen_count[limb] <= 0:
+			dying_limbs.append(limb)
+			emit_signal("limb_died", limb)
+			_limb_labels[limb].text = "X"
+		else:
+			_limb_labels[limb].text = str(limb_oxygen_count[limb])
+			
+	for dead_limb in dying_limbs:
+		_limb_labels.erase(dead_limb)
+		_dead_limbs.append(dead_limb)
+	if _dead_limbs.size() == 4:
+		emit_signal("died")
+		
 
 func _on_SongManager_started(_bpm: float) -> void:
 	_has_started = true
 
 
 func _on_SongManager_beat_clock() -> void:
-	if not _has_started:
+	if not _has_started or _limb_labels.size() == 0:
 		return
 	_limb_index += 1
 	var limbs = _limb_labels.keys()
 	_limb_oxygen_count[limbs[_limb_index % limbs.size()]] -= 1
-	_update_labels()
+	emit_signal("oxygen_updated", _limb_oxygen_count)
