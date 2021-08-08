@@ -26,7 +26,7 @@ position = Vector2( 960, 690 )
 position = Vector2( 960, 690 )
 
 [node name="Crowd" parent="." instance=ExtResource( 4 )]
-frame = 2
+frame = 0
 
 [node name="Dude" parent="." instance=ExtResource( 7 )]
 position = Vector2( 952, 216 )
@@ -45,41 +45,45 @@ script = ExtResource( 8 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Key" parent="CanvasLayer" instance=ExtResource( 10 )]
+margin_top = 496.0
+margin_bottom = 556.0
 action = "arm_left"
 
 [node name="Key2" parent="CanvasLayer" instance=ExtResource( 10 )]
-margin_left = 1264.0
+margin_left = 1284.0
+margin_top = 496.0
 margin_right = 1344.0
+margin_bottom = 556.0
 action = "arm_right"
 
 [node name="Label" parent="CanvasLayer/Key2" index="0"]
 text = "E"
 
 [node name="Key3" parent="CanvasLayer" instance=ExtResource( 10 )]
-margin_left = 656.0
-margin_top = 936.0
-margin_right = 736.0
-margin_bottom = 1016.0
+margin_left = 640.0
+margin_top = 964.0
+margin_right = 700.0
+margin_bottom = 1024.0
 action = "leg_left"
 
 [node name="Label" parent="CanvasLayer/Key3" index="0"]
 text = "A"
 
 [node name="Key4" parent="CanvasLayer" instance=ExtResource( 10 )]
-margin_left = 1184.0
-margin_top = 936.0
-margin_right = 1264.0
-margin_bottom = 1016.0
+margin_left = 1220.0
+margin_top = 964.0
+margin_right = 1280.0
+margin_bottom = 1024.0
 
 [node name="Label" parent="CanvasLayer/Key4" index="0"]
 text = "D"
 
 [connection signal="beat_clock" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_clock"]
 [connection signal="beat_hit" from="BeatManager/SongManager" to="HitFeedbackIndicator" method="_on_SongManager_beat_hit"]
-[connection signal="beat_hit" from="BeatManager/SongManager" to="Heart" method="_on_SongManager_beat_hit"]
 [connection signal="beat_hit" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_beat_hit"]
-[connection signal="failed" from="BeatManager/SongManager" to="BeatManager" method="_on_SongManager_failed"]
+[connection signal="beat_hit" from="BeatManager/SongManager" to="Heart" method="_on_SongManager_beat_hit"]
 [connection signal="failed" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_failed"]
+[connection signal="failed" from="BeatManager/SongManager" to="BeatManager" method="_on_SongManager_failed"]
 [connection signal="started" from="BeatManager/SongManager" to="OxygenManager" method="_on_SongManager_started"]
 [connection signal="died" from="OxygenManager" to="BeatManager" method="_on_OxygenManager_died"]
 [connection signal="died" from="OxygenManager" to="Dude" method="_on_OxygenManager_died"]

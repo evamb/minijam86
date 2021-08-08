@@ -27,7 +27,7 @@ font_data = ExtResource( 1 )
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.823529 )
+color = Color( 0, 0, 0, 1 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -111,6 +111,7 @@ text = "Main menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -5.081
 
 [connection signal="button_up" from="CenterContainer/VBoxContainer/HBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_button_up"]
 [connection signal="button_up" from="CenterContainer/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_MenuButton_button_up"]
