@@ -5,7 +5,6 @@ signal beat_hit
 signal beat
 signal target_selected
 signal bar_selected
-signal offset_updated
 
 var _prev_deviation = -1.0
 var _cur_bar_index = 0
@@ -44,13 +43,12 @@ func get_notes(easy = true) -> PoolRealArray:
 	return offsets
 
 
-func _next_target(time: float) -> float:
+func _next_target() -> void:
 	_was_triggered = false
 	var diff_index_offset = 0 if _offset <= 0 else bars.size() / 2
 	var cur_bar = bars[song[_cur_bar_index] + diff_index_offset]
 	if _cur_note_index == 0:
 		emit_signal("bar_selected", cur_bar)
-		print("new bar!")
 	var cur_note = _offset * _bar_duration + _cur_bar_index * _bar_duration\
 		+ cur_bar[_cur_note_index] * _bar_duration
 	_cur_target_time = cur_note
@@ -71,12 +69,11 @@ func _next_target(time: float) -> float:
 	_next_split_time = cur_note + (next_note - cur_note) / 2.0
 	_cur_bar_index = next_bar_index
 	_cur_note_index = next_note_index
-	return next_note
 
 
 func update_time(time: float) -> void:
 	if time >= _next_split_time:
-		var next_target_time = _next_target(time)
+		_next_target()
 		_beat_index += 1
 		var duration_to_next_split = _next_split_time - time
 		emit_signal("target_selected", duration_to_next_split)

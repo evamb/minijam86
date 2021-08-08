@@ -10,7 +10,7 @@ enum Status {
 onready var _tween = $Tween
 
 
-func _on_SongManager_beat_hit(input_delay: float, beat_index: int, action: String) -> void:
+func _on_SongManager_beat_hit(input_delay: float, _beat_index: int, _action: String) -> void:
 	var frame = Status.PERFECT
 	if abs(input_delay) > Globals.MISS_THRESHOLD:
 		frame = Status.MISS
