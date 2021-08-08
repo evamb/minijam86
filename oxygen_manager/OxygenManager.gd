@@ -4,6 +4,7 @@ signal oxygen_updated
 signal limb_died
 signal died
 signal beat_clock
+signal preparation_completed
 
 var _limb_oxygen_count = {
 	"arm_left": 2,
@@ -16,6 +17,7 @@ var _has_started = false
 var _dead_limbs = []
 var _dance_prepared = false
 var _clock_count = 0
+var _dance_move_index = 0
 
 onready var _limb_locations = {
 	"arm_left": $ArmLeft,
@@ -95,7 +97,8 @@ func _on_SongManager_started(_bpm: float) -> void:
 
 
 func _prepare_dance() -> void:
-	var requirements = Globals.DANCE_MOVES[randi() % Globals.DANCE_MOVES.size()]
+	_dance_move_index = randi() % Globals.DANCE_MOVES.size()
+	var requirements = Globals.DANCE_MOVES[_dance_move_index]
 	_limb_oxygen_count = requirements.duplicate()
 #	var rest_oxygen = 0
 #	for dead in _dead_limbs:
@@ -128,6 +131,7 @@ func _check_limbs() -> void:
 	if _dead_limbs.size() == 4:
 		emit_signal("died")
 	else:
+		emit_signal("preparation_completed", _dance_move_index)
 		_prepare_dance()
 
 
